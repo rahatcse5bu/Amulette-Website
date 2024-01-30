@@ -1,6 +1,6 @@
 const Header = () => {
 	return (
-		<div className="header-wrapper">
+		<div className="header-wrapper mb-7">
 			<div className="header container mx-auto flex flex-row items-center justify-between py-6">
 				<div className="logo">
 					<img src="Images/Header/Logo.svg" alt="amulette logo" />
@@ -29,10 +29,10 @@ const Header = () => {
 				</div>
 				<div className="cart-lang flex flex-row items-center justify-center space-x-10">
 					<div className="cart-wrapper flex flex-row items-center justify-center">
-						<span className="mr-1 text-primaryColor text-lg font-Poppins font-semibold">
+						{/* <span className="mr-1 text-primaryColor text-lg font-Poppins font-semibold">
 							Cart
 						</span>
-						<img src="Images/Header/Cart.svg" />
+						<img src="Images/Header/Cart.svg" /> */}
 					</div>
 					<select className="lang border border-primaryColor rounded-[54px] py-2 px-4">
 						<option selected value="english">

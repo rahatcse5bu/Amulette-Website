@@ -7,7 +7,7 @@ const StayWithUs = () => {
         // width: "100%",
         // height: "400px", // Adjust the height as needed
   
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat'
       }}
       className="stay-with-us-wrapper lg:mt-[74px] lg:pb-16"

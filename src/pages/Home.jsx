@@ -5,7 +5,7 @@ import OurProducts from "../components/Home/OurProducts/OurProducts";
 import CoreValues from "../components/Home/CoreValues/CoreValues";
 import DownloadApp from "../components/Home/DownloadApp/DownloadApp";
 import ContactUs from "../components/Home/ContactUs/ContactUs";
-import StayWithUs from "../components/Home/StayWithUs/StayWithUs";
+
 
 const Home = () => {
 	return (
@@ -18,7 +18,7 @@ const Home = () => {
 				<CoreValues />
 				<DownloadApp />
 				<ContactUs />
-				<StayWithUs/>
+			
 			</div>
 		</div>
 	);

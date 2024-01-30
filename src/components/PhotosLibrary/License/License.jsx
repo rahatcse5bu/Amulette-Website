@@ -1,16 +1,19 @@
-
+import { useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
+import { MdArrowDropUp } from "react-icons/md";
+import LicenseTabs from "./LicenseTabs";
 
 const License = () => {
-    return (
-        <div className='license'>
-            <div className='license-toggle flex flex-row items-center justify-between'>
-                <div className='title'>License</div>
-                <MdArrowDropDown />
-
-            </div>
-        </div>
-    );
+  const [isLicenseOpen, setIsLicenseOpen] = useState(true);
+  return (
+    <div className="license">
+      <div onClick={()=>setIsLicenseOpen(!isLicenseOpen)} className="license-toggle flex flex-row items-center justify-between cursor-pointer">
+        <div className="title">License</div>
+        <MdArrowDropDown />
+      </div>
+      {isLicenseOpen && <LicenseTabs />}
+    </div>
+  );
 };
 
 export default License;
