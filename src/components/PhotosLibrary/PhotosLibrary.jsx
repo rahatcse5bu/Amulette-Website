@@ -10,51 +10,53 @@ const PhotosLibrary = () => {
     {
       photo:
         "https://images.pexels.com/photos/1632794/pexels-photo-1632794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750",
+        isDimond:false,
     },
     {
       photo:
         "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=600",
+        isDimond:true,
     },
     {
       photo:
         "https://images.pexels.com/photos/1547813/pexels-photo-1547813.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:false,},
     {
       photo:
         "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:true,},
     {
       photo:
         "https://images.pexels.com/photos/707344/pexels-photo-707344.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:false, },
     {
       photo:
         "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:false, },
     {
       photo:
         "https://images.pexels.com/photos/234272/pexels-photo-234272.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:false, },
     {
       photo:
         "https://images.pexels.com/photos/1276518/pexels-photo-1276518.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:true,},
     {
       photo:
         "https://images.pexels.com/photos/1381679/pexels-photo-1381679.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:true, },
     {
       photo:
         "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:false,},
     {
       photo:
         "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:false,},
     {
       photo:
         "https://images.pexels.com/photos/2105416/pexels-photo-2105416.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
+        isDimond:true, },
   ];
   return (
     <div className="photos-library-wrapper ">
