@@ -18,13 +18,13 @@ const Header = () => {
 							<Link to="/photos-library">Photos Library</Link>
 						</li>
 						<li className="">
-							<a to="#">Products</a>
+							<Link to="/products">Products</Link>
 						</li>
 						<li className="">
-							<Link to="#">Get The App</Link>
+							<Link to="/get-amulette-app">Get The App</Link>
 						</li>
 						<li className="">
-							<Link to="#">Contact Us</Link>
+							<Link to="/contact-us">Contact Us</Link>
 						</li>
 					</ul>
 				</div>
