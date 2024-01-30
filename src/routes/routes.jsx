@@ -3,8 +3,8 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../pages/Home";
 import PhotosLibraryPage from "../pages/PhotosLibrary";
 import Products from "../pages/products";
-import GetTheApp from "../pages/GetTheApp";
 import ContactUs from "../pages/ContactUs";
+import GetAppsPage from "../pages/GetApps";
 
 export const router = createBrowserRouter([
 	{
@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
 			},
 			{
 				path: "/get-the-app",
-				element: <GetTheApp />,
+				element: <GetAppsPage />,
 			},
 			{
 				path: "/contact-us",

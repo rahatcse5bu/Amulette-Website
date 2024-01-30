@@ -1,5 +1,7 @@
-const ContactUs = () => {
-	return <div>ContactUs</div>;
+import ContactUs from "../components/Home/ContactUs/ContactUs";
+
+const ContactUsPage = () => {
+	return <ContactUs />;
 };
 
-export default ContactUs;
+export default ContactUsPage;
