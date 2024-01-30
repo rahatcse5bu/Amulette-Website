@@ -1,12 +1,11 @@
-import React from 'react';
-import PhotosLibrary from '../components/PhotosLibrary/PhotosLibrary';
+import PhotosLibrary from "../components/PhotosLibrary/PhotosLibrary";
 
 const PhotosLibraryPage = () => {
-    return (
-        <div className='photos-library-page'>
-       <PhotosLibrary/>
-        </div>
-    );
+	return (
+		<div className="photos-library-page">
+			<PhotosLibrary />
+		</div>
+	);
 };
 
 export default PhotosLibraryPage;

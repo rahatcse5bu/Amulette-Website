@@ -1,35 +1,37 @@
+import { NavLink } from "react-router-dom";
+import { menuItems } from "../../constants/constant-data";
+
 const Header = () => {
 	return (
 		<div className="header-wrapper mb-7">
-			<div className="header container mx-auto flex flex-row items-center justify-between py-6">
+			<div className="container flex flex-row items-center justify-between py-6 mx-auto header">
 				<div className="logo">
 					<img src="Images/Header/Logo.svg" alt="amulette logo" />
 				</div>
 				<div className="header-menu-items">
-					<ul className=" flex flex-row items-center justify-center space-x-10 text-menuColor text-lg font-Poppins font-semibold">
-						<li className="text-primaryColor">
-							<a className="relative" href="#">
-								Home
-								<span className="absolute bottom-[-4px] left-2 w-[50%] h-[2px] bg-primaryColor"></span>
-							</a>
-						</li>
-						<li className="">
-							<a href="#">Photos Library</a>
-						</li>
-						<li className="">
-							<a href="#">Products</a>
-						</li>
-						<li className="">
-							<a href="#">Get The App</a>
-						</li>
-						<li className="">
-							<a href="#">Contact Us</a>
-						</li>
+					<ul className="flex flex-row items-center justify-center space-x-10 text-lg font-semibold text-menuColor font-Poppins">
+						{menuItems.map((item) => {
+							return (
+								<li key={item.id} className="">
+									<NavLink
+										className={({ isActive }) =>
+											isActive
+												? "active relative text-primaryColor"
+												: "inactive"
+										}
+										to={item.path}
+									>
+										{item.name}
+										<span className="absolute bottom-[-4px] left-2 w-[50%] h-[2px] bg-primaryColor"></span>
+									</NavLink>
+								</li>
+							);
+						})}
 					</ul>
 				</div>
-				<div className="cart-lang flex flex-row items-center justify-center space-x-10">
-					<div className="cart-wrapper flex flex-row items-center justify-center">
-						{/* <span className="mr-1 text-primaryColor text-lg font-Poppins font-semibold">
+				<div className="flex flex-row items-center justify-center space-x-10 cart-lang">
+					<div className="flex flex-row items-center justify-center cart-wrapper">
+						{/* <span className="mr-1 text-lg font-semibold text-primaryColor font-Poppins">
 							Cart
 						</span>
 						<img src="Images/Header/Cart.svg" /> */}
