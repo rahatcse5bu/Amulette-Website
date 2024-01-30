@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const Header = () => {
 	return (
 		<div className="header-wrapper mb-7">
@@ -8,22 +9,22 @@ const Header = () => {
 				<div className="header-menu-items">
 					<ul className=" flex flex-row items-center justify-center space-x-10 text-menuColor text-lg font-Poppins font-semibold">
 						<li className="text-primaryColor">
-							<a className="relative" href="#">
+							<Link className="relative" to="/">
 								Home
 								<span className="absolute bottom-[-4px] left-2 w-[50%] h-[2px] bg-primaryColor"></span>
-							</a>
+							</Link>
 						</li>
 						<li className="">
-							<a href="#">Photos Library</a>
+							<Link to="/photos-library">Photos Library</Link>
 						</li>
 						<li className="">
-							<a href="#">Products</a>
+							<a to="#">Products</a>
 						</li>
 						<li className="">
-							<a href="#">Get The App</a>
+							<Link to="#">Get The App</Link>
 						</li>
 						<li className="">
-							<a href="#">Contact Us</a>
+							<Link to="#">Contact Us</Link>
 						</li>
 					</ul>
 				</div>
