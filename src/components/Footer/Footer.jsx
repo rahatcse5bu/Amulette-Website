@@ -17,7 +17,7 @@ import DesktopFooter from "./DesktopFooter";
 
 const Footer = () => {
   return (
-    <div className="footer-wrapper relative bg-[#25282B] lg:pt-[100px] lg:pb-[70px] mt-[50px] lg:mt-[50px] ">
+    <div className="footer-wrapper relative bg-[#25282B] lg:pt-[100px] lg:pb-[70px] ">
     
       <div className="container mx-auto px-0 footer-main flex flex-col lg:flex-row items-center lg:items-start justify-between text-white">
         <DesktopFooter/>
