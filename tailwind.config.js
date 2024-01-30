@@ -9,6 +9,10 @@ export default {
 				headingColor:'#25282B',
 				categoryTabColor:'rgba(246, 95, 25, 0.10)',
 			},
+			fontFamily: {
+				Montserrat: ['Montserrat', 'sans-serif'],
+				Poppins: ['Poppins', 'sans-serif'],
+		},
 			rotate: {
 				'minus-45': '-45deg', // Add a custom rotation
  },
