@@ -5,6 +5,7 @@ import PhotosLibraryPage from "../pages/PhotosLibrary";
 import Products from "../pages/products";
 import ContactUs from "../pages/ContactUs";
 import GetAppsPage from "../pages/GetApps";
+import ProductDetailsPage from "../pages/ProductDetailsPage";
 
 export const router = createBrowserRouter([
 	{
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
 			{
 				path: "/contact-us",
 				element: <ContactUs />,
+			},
+			{
+				path: "/product-details",
+				element: <ProductDetailsPage />,
 			},
 		],
 	},
