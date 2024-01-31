@@ -1,8 +1,18 @@
+import { useEffect, useMemo, useState } from "react";
 import ProductCard from "../components/Home/OurProducts/ProductCard";
 import { productsData } from "../components/Home/OurProducts/ProductData";
 import { IoSearchSharp } from "react-icons/io5";
+import ProductNotFound from "../components/ProductNotFound";
 
 const ProductsPage = () => {
+    const [productSearchTitle,setProductSearchTitle]=useState('')
+
+   const filteredProducts = useMemo(() => 
+   productsData.filter(product => 
+     product.title.toLowerCase().includes(productSearchTitle.toLowerCase())
+   ), 
+ [productSearchTitle]);
+ 
   return (
     <div className="product-page bg-[#FDFDFD] pt-7">
       <div className="products-wrapper container mx-auto">
@@ -16,8 +26,9 @@ const ProductsPage = () => {
         <div className="search-sort-wrapper flex flex-row items-center justify-between space-x-7 mt-7">
           <div className="search-wrapper w-full flex flex-row items-center justify-center space-x-2.5 border border-[#DADADA] rounded-full px-4 py-3.5">
             <IoSearchSharp className="text-primaryColor" />
-            <input
+            <input onChange={(e)=>setProductSearchTitle(e.target.value)}
               type="text"
+               value={productSearchTitle}
               className="w-full"
               placeholder="Search for product..."
             />
@@ -29,11 +40,16 @@ const ProductsPage = () => {
           </select>
         </div>
         <div className="grid grid-cols-4 gap-4 mt-9">
-          {productsData?.map((data, index) => (
+         {filteredProducts.length>0  && filteredProducts?.map((data, index) => (
             <ProductCard key={index} product={data} index={index} />
           ))}
         </div>
+
       </div>
+      {filteredProducts.length<=0 && (
+                <ProductNotFound/>
+            )
+            }
     </div>
   );
 };

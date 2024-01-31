@@ -8,7 +8,7 @@ import PrevButtonCustomCF from '../../NextPrevButton/PrevButtonCustomCF';
 import NextButtonCustomEB from '../../NextPrevButton/NextButtonCustomEB';
 import { productsData } from './ProductData';
 // import PrevButtonCustomCF from '../../NextPrevButton/PrevButtonCustomCF';
-const OurProducts = () => {
+const OurProducts = ({isOurProduct=true}) => {
     const [isPrevDisabled, setIsPrevDisabled] = useState(true)
     const [isNextDisabled, setIsNextDisabled] = useState(false)
   
@@ -37,12 +37,15 @@ const OurProducts = () => {
     return (
         <div className='our-products-wrapper mt-[52px]'>
         <div className='our-products container mx-auto'>
+          {isOurProduct &&(
         <h1 className="lg:text-[40px] font-semibold font-Poppins text-center">
-          <span className="text-primaryColor">Our </span>
-          <span className="">
-            Products
-          </span>
-        </h1>
+        <span className="text-primaryColor">Our </span>
+        <span className="">
+          Products
+        </span>
+      </h1>
+          )}
+
         <div className="carousel-container relative ">
           <PrevButtonCustomCF prevRef={prevRef} disabled={isPrevDisabled} />
           <NextButtonCustomEB nextRef={nextRef} disabled={isNextDisabled} />
