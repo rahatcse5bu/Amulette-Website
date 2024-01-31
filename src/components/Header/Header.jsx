@@ -3,7 +3,7 @@ import { menuItems } from "../../constants/constant-data";
 
 const Header = () => {
 	return (
-		<div className="header-wrapper mb-7">
+		<div className="header-wrapper ">
 			<div className="container flex flex-row items-center justify-between py-6 mx-auto header">
 				<div className="logo">
 					<img src="Images/Header/Logo.svg" alt="amulette logo" />
