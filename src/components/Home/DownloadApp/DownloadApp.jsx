@@ -9,7 +9,7 @@ const DownloadApp = () => {
         <div className="col-left w-full lg:w-1/2">
           <div
             style={{ background: "rgba(246, 95, 25, 0.10)" }}
-            className="amulette-available w-full flex flex-row items-center justify-center text-[11px] lg:text-sm border-[1px] border-primaryColor space-x-3 rounded-full lg:px-2.5 py-2"
+            className="amulette-available w-full lg:w-[70%] flex flex-row items-center justify-center lg:justify-start text-[11px] lg:text-sm border-[1px] border-primaryColor space-x-3 rounded-full lg:px-2.5 py-2"
           >
             <span className="bg-primaryColor text-white font-semibold text-center px-4 lg:px-10 py-1 lg:py-1.5 rounded-full">
               Amulette
@@ -23,7 +23,7 @@ const DownloadApp = () => {
             Express Yourself with Amulette. A compact, stylish, and customizable
             badge that showcases your unique personality.{" "}
           </p>
-          <div className="download-btns flex flex--col flex-row items-center justify-between justify--start space-x-7
+          <div className="download-btns flex  flex-row items-center justify-between lg:justify-start space-x-7
            mt-11">
             <div  className="apple-btn flex flex-row items-center justify-center space-x-3.5 px-4 lg:px-7 py-2 lg:py-3 bg-primaryColor border border-primaryColor  rounded-full cursor-pointer">
               <div className="left">
