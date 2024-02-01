@@ -3,8 +3,13 @@ import PhotoCard from "./PhotoCard/PhotoCard";
 import { IoSearchSharp } from "react-icons/io5";
 import Category from "./Category/Category";
 import Pagination from "./Pagination/Pagination";
+import { HiAdjustmentsHorizontal } from "react-icons/hi2";
+import { useState } from "react";
+import PhotosLibrarySidebar from "./PhotosLibrarySidebar/PhotosLibrarySidebar";
 
 const PhotosLibrary = () => {
+	const [sideBarOpen, setSideBarOpen] = useState(false);
+
 	const photos = [
 		{
 			photo:
@@ -67,14 +72,21 @@ const PhotosLibrary = () => {
 			isDimond: true,
 		},
 	];
+
+	// TODO:: sidebar open handler
+	const sideBarHandler = () => {
+		setSideBarOpen((prev) => !prev);
+	};
+
 	return (
 		<div className="photos-library-wrapper ">
-			<div className="container flex flex-row items-start justify-between mx-auto space-x-8 photos-library lg:flex-row">
-				<div className="col-left px-9 py-8 rounded-3xl border border-[#979898]">
+			<div className="container flex flex-col items-start justify-between mx-auto md:space-x-8 md:px-0 px-0 md:bg-white bg-[#fdfdfd] photos-library md:flex-row">
+				<div className="col-left px-9 py-8 md:block hidden rounded-3xl border border-[#979898]">
 					<License />
 					<Category />
 				</div>
-				<div className="col-right rounded-3xl border border-[#979898] px-11 py-7">
+
+				<div className="col-right md:rounded-3xl  md:border border-[#979898] px-11 py-7">
 					<h3 className="text-[25px] font-bold">
 						<span className="text-[#25282B">Explore</span>
 						<span className="text-primaryColor"> Diverse Photos</span>
@@ -84,17 +96,28 @@ const PhotosLibrary = () => {
 						landscapes to adorable pets, discover a world of creativity and
 						inspiration.
 					</p>
-					<div className="search-wrapper mt-7">
-						<div className="search border flex flex-row items-center justify-start space-x-2.5 border-[#DADADA] rounded-3xl px-4 py-3">
+					<div className="search-wrapper relative items-center mt-7 flex justify-between">
+						{sideBarOpen && (
+							<PhotosLibrarySidebar sideBarHandler={sideBarHandler} />
+						)}
+						<div
+							onClick={sideBarHandler}
+							className="block md:hidden px-6 py-4 h-[50px] bg-primaryColor rounded-2xl cursor-pointer "
+						>
+							<HiAdjustmentsHorizontal className="w-6 h-6 text-white" />
+						</div>
+
+						<div className="search border w-full flex md:ml-0 ml-3 flex-row items-center justify-start space-x-2.5 border-[#DADADA] rounded-3xl px-4 py-3 h-[50px]">
 							<IoSearchSharp color="#F65F19" size={18} />{" "}
 							<input
-								className="w-[85%] focus:border-0 px-4 py-2"
+								className="w-[85%] focus:border-0 indent-3 outline-none "
 								type="text"
 								placeholder="Search"
 							/>
 						</div>
 					</div>
-					<div className="grid grid-cols-4 gap-8 mt-9">
+					{/* photos section */}
+					<div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2  gap-8 mt-9">
 						{photos?.map((photo, index) => (
 							<PhotoCard key={index} photo={photo} />
 						))}
