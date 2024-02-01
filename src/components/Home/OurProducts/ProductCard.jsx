@@ -11,7 +11,7 @@ const ProductCard = ({product}) => {
         {product.title}
       </h3>
       <p className="desc text-[9px] lg:text-xs text-[#1C121F] font-normal font-Poppins mt-2">
-      {product.description}
+      {product.shortDescription}
       </p>
       <div className="usd-add-to-cart flex flex-row items-center justify-center space-x-9 mt-3.5">
         <span className="text-[#1C121F] text-sm  lg:text-lg font-semibold">${product.price}</span>
