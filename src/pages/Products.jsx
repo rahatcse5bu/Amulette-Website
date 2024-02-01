@@ -24,16 +24,16 @@ const ProductsPage = () => {
  
   return (
     <div className="product-page bg-[#FDFDFD] pt-7">
-      <div className="products-wrapper container mx-auto">
-        <h1 className="text-2xl font-bold text-left">
+      <div className="products-wrapper container mx-auto px-5 lg:px-0">
+        <h1 className=" text-xl lg:text-2xl font-bold text-left">
           <span className="text-[#25282B]">Amulette</span>
-          <span className="text-primaryColor">Accessories</span>
+          <span className="text-primaryColor"> Accessories</span>
         </h1>
-        <p className="text-[#25282B] text-sm font-normal text-left mt-4">
+        <p className="text-[#25282B] text-[12px] lg:text-sm font-normal text-left mt-4">
           Elevate Your Experience with Our Range of Stylish Accessories
         </p>
         <div className="search-sort-wrapper flex flex-row items-center justify-between space-x-7 mt-7">
-          <div className="search-wrapper w-full flex flex-row items-center justify-center space-x-2.5 border border-[#DADADA] rounded-full px-4 py-3.5">
+          <div className="search-wrapper w-3/4 lg:w-full flex flex-row items-center justify-center space-x-2.5 border border-[#DADADA] rounded-full px-2 lg:px-4 py-2 lg:py-3.5">
             <IoSearchSharp className="text-primaryColor" />
             <input onChange={(e)=>setProductSearchTitle(e.target.value)}
               type="text"
@@ -45,7 +45,7 @@ const ProductsPage = () => {
           <select
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
-          className="border border-primaryColor px-5 py-2.5  rounded-full">
+          className="w-1/4 lg:w-auto border border-primaryColor px-2 lg:px-5 py-2 lg:py-2.5  rounded-full">
             <option disabled value="Sort by">Sort By: Price low to high</option>
             <option value="low-to-high">Price: Low to High</option>
             <option value="high-to-low">Price: High to Low</option>
