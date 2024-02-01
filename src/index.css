@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active-header span {
+	display: block;
+}
+.inactive-header > span {
+	display: none;
+}

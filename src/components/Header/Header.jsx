@@ -16,13 +16,13 @@ const Header = () => {
 									<NavLink
 										className={({ isActive }) =>
 											isActive
-												? "active relative text-primaryColor"
-												: "inactive"
+												? "active-header relative text-primaryColor"
+												: "inactive-header"
 										}
 										to={item.path}
 									>
 										{item.name}
-										<span className="absolute bottom-[-4px] left-2 w-[50%] h-[2px] bg-primaryColor"></span>
+										<span className=" bottom-[-4px]   w-[20px] mx-auto h-[3px] bg-primaryColor"></span>
 									</NavLink>
 								</li>
 							);
