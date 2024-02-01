@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import {  useMemo, useState } from "react";
 import ProductCard from "../components/Home/OurProducts/ProductCard";
 import { productsData } from "../components/Home/OurProducts/ProductData";
 import { IoSearchSharp } from "react-icons/io5";
