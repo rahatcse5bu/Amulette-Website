@@ -10,7 +10,7 @@ import MobileMenu from "./MobileMenu";
 const Header = () => {
 	const [isMobileMenuOpen,setIsMobileMenuOpen]=useState(false);
   return (
-    <div className="header-wrapper z-50 sticky top-0">
+    <div className="header-wrapper z-50 sticky top-0 bg-white">
 <DesktopHeader/>
       <div className="mobile-header bg-white lg:hidden flex flex-row items-center justify-between px-5 py-4">
         <div className="col-left">
