@@ -20,10 +20,10 @@ const Hero = () => {
           <span className="showcases your unique personality."></span>
         </div>
         <div className="buttons flex flex-row items-center justify-center space-x-7 mt-12">
-          <button className="text-sm lg:text-xl font-Poppins font-medium bg-primaryColor text-white px-12 lg:px-[76px] py-3 lg:py-4 rounded-lg">
+          <button className="text-sm lg:text-xl font-Poppins font-medium bg-primaryColor text-white px-8 md:px-12 lg:px-[76px] py-2 md:py-3 lg:py-4 rounded-lg">
             Shop Now
           </button>
-          <button className="text-sm lg:text-xl font-Poppins font-medium text-primaryColor hover:bg-primaryColor hover:text-white border border-primaryColor px-12 lg:px-[76px] py-3 lg:py-4 rounded-lg">
+          <button className="text-sm lg:text-xl font-Poppins font-medium text-primaryColor hover:bg-primaryColor hover:text-white border border-primaryColor px-8 md:px-12 lg:px-[76px] py-2 md:py-3 lg:py-4 rounded-lg">
             Get The App
           </button>
         </div>
