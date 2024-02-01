@@ -51,21 +51,21 @@ const ProductDetailsRightSide = () => {
 		},
 	];
 	return (
-		<div className="w-[50%]">
+		<div className="md:w-[50%] w-full md:mt-0 mt-5">
 			{/* product general information */}
 			<h1 className="text-zinc-900 text-[25px] mb-[23px] font-semibold font-['Poppins'] leading-normal">
 				Amulette Device{" "}
 			</h1>
-			<p className="w-[581px] text-zinc-800 mb-[34px] text-[15px] font-normal font-['Poppins'] leading-7 tracking-tight">
+			<p className=" text-zinc-800 mb-[34px] text-[15px] font-normal font-['Poppins'] leading-7 tracking-tight">
 				A card-sized device that turns your memories into wearable art. Showcase
 				your unique style with this compact, customizable badge.
 			</p>
-			<h3 className="text-zinc-900 mb-[44px] text-3xl font-bold font-['Poppins'] leading-[30.89px]">
+			<h3 className="text-zinc-900 mb-[44px] md:block hidden text-3xl font-bold font-['Poppins'] leading-[30.89px]">
 				$ 50.00
 			</h3>
 			{/* button section */}
-			<div className="flex flex-col items-center mb-[40px] justify-start md:flex-row">
-				<div className="w-[210.10px] h-[61px] flex items-center justify-between px-5  bg-neutral-50 rounded-[500px] shadow-inner">
+			<div className="flex items-center mb-[40px] md:justify-start justify-between flex-row">
+				<div className="w-[210.10px] h-[61px] md:flex hidden items-center justify-between px-5  bg-neutral-50 rounded-[500px] shadow-inner">
 					<button>
 						<FaMinus className="w-4 h-4" />
 					</button>
@@ -74,10 +74,15 @@ const ProductDetailsRightSide = () => {
 						<FaPlus className="w-4 h-4" />
 					</button>
 				</div>
-				<div className="ml-10">
-					<button className="w-[237.90px] flex items-center justify-center px-5 h-[61px] bg-orange-600 rounded-[65.36px]">
+				<h3 className="text-zinc-900  md:hidden inline-block md:text-3xl font-bold text-xl font-['Poppins'] leading-[30.89px]">
+					$ 50.00
+				</h3>
+				<div className="ml-0 md:ml-10">
+					<button className="md:w-[237.90px] w-[200px] flex items-center justify-center px-5 md:h-[61px] h-[50px] bg-orange-600 rounded-[65.36px]">
 						<FaCartPlus className="w-4 h-4 text-white" />
-						<strong className="ml-2 text-lg text-white">Add to Cart</strong>
+						<strong className="ml-2 text-base text-white md:text-lg">
+							Add to Cart
+						</strong>
 					</button>
 				</div>
 			</div>
