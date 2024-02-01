@@ -97,7 +97,7 @@ const OurProducts = ({isOurProduct=true}) => {
             ))}
         </div>
         <div className='flex flex-row items-center justify-center m-10'>
-            <button className='px-8 py-4 cursor-pointer hover:bg-primaryColor hover:text-white text-primaryColor border-2 border-primaryColor rounded-[10px]'>View ALL Products</button>
+            <button className='px-4 lg:px-8 py-2 lg:py-4 cursor-pointer hover:bg-primaryColor hover:text-white text-primaryColor border-2 border-primaryColor rounded-[10px]'>View ALL Products</button>
           </div>
 </div>
 
