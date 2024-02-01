@@ -1,12 +1,28 @@
 /* eslint-disable react/prop-types */
 import Carousel from "react-multi-carousel";
 import image from "../../assets/carousel-image.png";
-import { FiChevronLeft } from "react-icons/fi";
-import { BiChevronRight } from "react-icons/bi";
 import { Colors } from "../../constants/colors";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import classNames from "classnames";
+import { useEffect, useState } from "react";
 const ProductDetailsLeftSide = () => {
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+	const handleResize = () => {
+		setWindowWidth(window.innerWidth);
+	};
+
+	useEffect(() => {
+		// Add event listener when component mounts
+		window.addEventListener("resize", handleResize);
+		// Clean up event listener when component unmounts
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
+	console.log("window-width~", windowWidth);
+
 	const responsive = {
 		desktop: {
 			breakpoint: { max: 3000, min: 1024 },
@@ -48,32 +64,15 @@ const ProductDetailsLeftSide = () => {
 		},
 	];
 
-	// eslint-disable-next-line react/prop-types
-	const CustomRightArrow = ({ onClick, ...rest }) => {
-		const {
-			onMove,
-			carouselState: { currentSlide, deviceType },
-		} = rest;
-		// onMove means if dragging or swiping in progress.
-		return (
-			<button
-				className="z-50 bg-red-900 absolute top-[50%] -translate-y-[-50%] left-0 text-black cursor-pointer w-[100px] h-[100px]"
-				onClick={() => onClick()}
-			>
-				right
-			</button>
-		);
-	};
-
 	const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
 		const {
 			carouselState: { currentSlide },
 		} = rest;
 		console.log(currentSlide);
 		return (
-			<div className="flex items-center justify-end w-full gap-4 mb-4 carousel-button-group">
+			<div className="flex items-center justify-end w-full gap-4 md:mb-4 carousel-button-group">
 				<button
-					className="absolute top-[50%] w-[50px] h-[50px] rounded-full left-[25px] p-3"
+					className="absolute top-[50%] w-[50px] h-[50px] rounded-full md:left-[25px] -left-4 p-3"
 					style={{
 						backgroundColor: currentSlide === 0 ? "#979898" : Colors.primary,
 					}}
@@ -86,7 +85,7 @@ const ProductDetailsLeftSide = () => {
 						backgroundColor:
 							currentSlide === images.length - 1 ? "#979898" : Colors.primary,
 					}}
-					className="absolute top-[50%] flex justify-center items-center right-[25px] w-[50px] h-[50px] rounded-full z-50"
+					className="absolute top-[50%] flex justify-center items-center md:right-[25px] -right-4  w-[50px] h-[50px] rounded-full z-50"
 					onClick={() => next()}
 				>
 					<FaArrowRight className="w-5 h-5 text-white" />
@@ -124,30 +123,34 @@ const ProductDetailsLeftSide = () => {
 	};
 
 	return (
-		<div className="w-[50%] border-2  p-10  shadow-md  mx-2 rounded-md relative">
+		<div className="md:w-[50%] w-full border-2   md:p-10 p-2  shadow-md  mx-2 rounded-md relative">
 			<Carousel
 				swipeable={false}
 				draggable={false}
-				showDots={true}
+				showDots={windowWidth > 768 ? true : false}
 				responsive={responsive}
 				autoPlaySpeed={1000}
 				customButtonGroup={<ButtonGroup />}
 				renderButtonGroupOutside={true}
 				arrows={false}
-				containerClass="py-10 h-[750px]  mb-10"
+				containerClass="md:py-10 md:h-[750px] h-auto  md:mb-10"
 				customDot={<CustomDot />}
 			>
 				{images.map((item) => {
 					return (
 						<div
 							key={item.id}
-							className=" rounded-md w-[480px] mb-[180px] mt-[20px] h-[calc(650px)]  bg-[#F6F6F6]  mx-auto"
+							className=" rounded-md md:w-[480px] w-full md:mb-[180px] mb-0 md:mt-[20px] md:h-[calc(650px)] h-auto bg-[#F6F6F6]  mx-auto"
 						>
 							<img src={item.images} alt="" className="w-full h-full" />
 						</div>
 					);
 				})}
 			</Carousel>
+			<button className="absolute flex items-center px-4 py-2 border-2 md:top-20 top-4 md:left-20 left-4 text-primaryColor border-primaryColor rounded-3xl">
+				<FaArrowLeft />
+				<strong className="ml-1">Back</strong>
+			</button>
 		</div>
 	);
 };

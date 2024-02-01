@@ -10,14 +10,14 @@ const StayWithUs = () => {
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat'
       }}
-      className="stay-with-us-wrapper lg:mt-[74px] lg:pb-16"
+      className="stay-with-us-wrapper  mt-[50px] lg:mt-[74px] py-8 lg:pb-16"
     >
-      <div className="stay-with-us container mx-auto flex flex-row items-center justify-between bg-[#FFEFE8] rounded-2xl px-16 py-14">
-        <div className="col-left">
-          <h1 className="text-[#1B1B1B] text-4xl font-Poppins font-medium">
+      <div className="stay-with-us lg:container mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between bg-[#FFEFE8] rounded-2xl px-5 lg:px-16 py-8 lg:py-14">
+        <div className="col-left flex flex-col items-center justify-center">
+          <h1 className="text-[#1B1B1B] text-xl lg:text-4xl font-Poppins font-bold lg:font-medium">
             Stay with us
           </h1>
-          <p className="text-[#1B1B1B] font-Poppins text-lg font-normal mt-3">
+          <p className="text-[#1B1B1B] font-Poppins text-sm lg:text-lg font-normal mt-3">
             Subscribe and be ready for an amazing experience
           </p>
         </div>
@@ -28,7 +28,7 @@ const StayWithUs = () => {
               type="email"
               placeholder="Enter email address"
             />
-            <button className="px-9 py-2.5 text-sm font-medium text-white border border-primaryColor bg-primaryColor rounded-lg">
+            <button className="px-6 lg:px-9 py-2 lg:py-2.5 text-[10px] lg:text-sm font-medium text-white border border-primaryColor bg-primaryColor rounded-lg">
               Continue
             </button>
           </div>

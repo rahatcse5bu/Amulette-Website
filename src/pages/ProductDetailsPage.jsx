@@ -3,7 +3,7 @@ import ProductDetailsRightSide from "../components/ProductDetailsPage/ProductDet
 
 const ProductDetailsPage = () => {
 	return (
-		<div className="flex items-center justify-between gap-3 px-10 py-5">
+		<div className="flex flex-col items-center justify-between gap-3 px-10 py-5 md:flex-row">
 			<ProductDetailsLeftSide />
 			<ProductDetailsRightSide />
 		</div>
