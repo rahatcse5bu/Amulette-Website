@@ -51,7 +51,7 @@ const ProductsPage = () => {
             <option value="high-to-low">Price: High to Low</option>
           </select>
         </div>
-        <div className="grid grid-cols-4 gap-4 mt-9">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-9">
          {filteredProducts.length>0  && filteredProducts?.map((data, index) => (
             <ProductCard key={index} product={data} index={index} />
           ))}
