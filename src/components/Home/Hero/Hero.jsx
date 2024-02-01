@@ -1,16 +1,15 @@
-import React from "react";
 
 const Hero = () => {
   return (
     <div
       style={{ backgroundImage: `url('Images/Hero/Hero-BG.svg')` }}
-      className="hero-wrapper bg-cover bg-center pt-[160px] pb-[180px]"
+      className="hero-wrapper bg-cover bg-center pt-[50px] lg:pt-[160px] pb-[70px] lg:pb-[180px] "
     >
-      <div className="hero container mx-auto  flex flex-col items-start justify-start ">
-        <h3 className="text-left capitalize text-primaryColor font-Poppins font-bold text-xl">
+      <div className="hero container mx-auto  flex flex-col items-start justify-start px-5 lg:px-0">
+        <h3 className="text-left capitalize text-primaryColor font-Poppins font-bold text-sm lg:text-xl">
           Express Yourself with Amulette
         </h3>
-        <div className="heading-section flex flex-col items-start justify-start text-left font-Poppins lg:text-[66px] text-headingColor mt-8">
+        <div className="heading-section flex flex-col items-start justify-start text-left font-Poppins text-[30px] lg:text-[66px] text-headingColor mt-8">
           <span className="blockk">Your Personal</span>
           <span className="">Badge of Creativity!</span>
         </div>
@@ -21,10 +20,10 @@ const Hero = () => {
           <span className="showcases your unique personality."></span>
         </div>
         <div className="buttons flex flex-row items-center justify-center space-x-7 mt-12">
-          <button className="text-xl font-Poppins font-medium bg-primaryColor text-white px-[76px] py-4 rounded-lg">
+          <button className="text-sm lg:text-xl font-Poppins font-medium bg-primaryColor text-white px-12 lg:px-[76px] py-3 lg:py-4 rounded-lg">
             Shop Now
           </button>
-          <button className="text-xl font-Poppins font-medium text-primaryColor hover:bg-primaryColor hover:text-white border border-primaryColor px-[76px] py-4 rounded-lg">
+          <button className="text-sm lg:text-xl font-Poppins font-medium text-primaryColor hover:bg-primaryColor hover:text-white border border-primaryColor px-12 lg:px-[76px] py-3 lg:py-4 rounded-lg">
             Get The App
           </button>
         </div>

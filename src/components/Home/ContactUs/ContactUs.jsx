@@ -3,8 +3,8 @@ import React from "react";
 const ContactUs = () => {
 	return (
 		<div className="contact-us-wrapper">
-			<div className="container mx-auto contact-us">
-				<h1 className="text-center font-Poppins text-[40px] font-bold">
+			<div className="container mx-auto contact-us flex flex-col items-center justify-center px-5 lg:px-0">
+				<h1 className="text-center font-Poppins text-xl lg:text-[40px] font-bold">
 					Contact Us for any Queries
 				</h1>
 				<div className="flex flex-row items-center justify-center amulette-assist-wrapper">
@@ -15,13 +15,13 @@ const ContactUs = () => {
 						<span className=""> Is happy to assist you!</span>
 					</div>
 				</div>
-				<div className="contact-form-row flex flex-row items-start justify-between lg:space-x-[206px] lg:mt-[68px]">
-					<div className="w-1/2 col-left">
+				<div className="contact-form-row flex  flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between lg:space-x-[206px] lg:mt-[68px]">
+					<div className="w-full lg:w-1/2 col-left">
 						<img src="Images/ContactUs/Contact-Us-Img.svg" width={615} />
 					</div>
-					<div className="flex flex-row items-center justify-start w-1/2 col-right">
+					<div className="flex flex-row items-center justify-start w-full lg:w-1/2 col-right">
 						<div className="flex flex-col items-start justify-start w-full space-y-3 contact-form">
-							<div className="email-wrapper flex flex-col items-start justify-start w-[85%]">
+							<div className="email-wrapper flex flex-col items-start justify-start w-full lg:w-[85%]">
 								<label className="">
 									Email
 									<sup className="text-[#FF5551] font-semibold text-sm">*</sup>
@@ -33,7 +33,7 @@ const ContactUs = () => {
 									placeholder="example@gmail.com"
 								/>
 							</div>
-							<div className="subject-wrapper flex flex-col items-start justify-start w-[85%]">
+							<div className="subject-wrapper flex flex-col items-start justify-start w-full lg:w-[85%]">
 								<label className="">
 									Subject
 									<sup className="text-[#FF5551] font-semibold text-sm">*</sup>
@@ -43,7 +43,7 @@ const ContactUs = () => {
 									<option value={"purchases"}> Purchases</option>
 								</select>
 							</div>
-							<div className="message-wrapper flex flex-col items-start justify-start w-[85%]">
+							<div className="message-wrapper flex flex-col items-start justify-start w-full lg:w-[85%]">
 								<label className="">Message</label>
 								<textarea
 									rows={5}
@@ -57,7 +57,7 @@ const ContactUs = () => {
 										boxShadow:
 											"3.045px 10.15px 22.855px 0px rgba(246, 95, 25, 0.10)",
 									}}
-									className="text-white bg-primaryColor text-lg font-Poppins font-medium px-20 py-3.5 rounded-lg"
+									className="text-white bg-primaryColor text-[12px] lg:text-lg font-Poppins font-medium px-11 lg:px-20 py-2.5 lg:py-3.5 rounded-lg"
 								>
 									Submit Now
 								</button>

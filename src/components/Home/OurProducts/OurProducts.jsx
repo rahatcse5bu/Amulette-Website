@@ -36,9 +36,9 @@ const OurProducts = ({isOurProduct=true}) => {
   };
     return (
         <div className='our-products-wrapper mt-[52px]'>
-        <div className='our-products container mx-auto'>
+        <div className='our-products container mx-auto px-5 lg:px-0'>
           {isOurProduct &&(
-        <h1 className="lg:text-[40px] font-semibold font-Poppins text-center">
+        <h1 className="text-xl lg:text-[40px] font-semibold font-Poppins text-center mb-5">
         <span className="text-primaryColor">Our </span>
         <span className="">
           Products
@@ -46,7 +46,7 @@ const OurProducts = ({isOurProduct=true}) => {
       </h1>
           )}
 
-        <div className="carousel-container relative ">
+        <div className="carousel-container relative hidden lg:block">
           <PrevButtonCustomCF prevRef={prevRef} disabled={isPrevDisabled} />
           <NextButtonCustomEB nextRef={nextRef} disabled={isNextDisabled} />
 
@@ -90,6 +90,17 @@ const OurProducts = ({isOurProduct=true}) => {
             <button className='px-8 py-4 cursor-pointer hover:bg-primaryColor hover:text-white text-primaryColor border-2 border-primaryColor rounded-[10px]'>View ALL Products</button>
           </div>
         </div>
+<div className='mobile-product-wrapper block lg:hidden '>
+<div className='mobile-product-grid lg:hidden grid grid-cols-1 md:grid-cols-2 gap-3 '>
+          {productsData && productsData.length > 0 && productsData.map((data,  index) => (
+            <ProductCard key={index} product={data} index={index} />
+            ))}
+        </div>
+        <div className='flex flex-row items-center justify-center m-10'>
+            <button className='px-8 py-4 cursor-pointer hover:bg-primaryColor hover:text-white text-primaryColor border-2 border-primaryColor rounded-[10px]'>View ALL Products</button>
+          </div>
+</div>
+
             </div>
         </div>
     );

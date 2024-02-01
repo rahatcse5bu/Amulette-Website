@@ -9,7 +9,7 @@ import ContactUs from "../components/Home/ContactUs/ContactUs";
 
 const Home = () => {
 	return (
-		<div className="home-wrapper bg-[#FDFDFD] pt-7">
+		<div className="home-wrapper bg-[#FDFDFD] pt--7">
 			<div className="home containerr mx-auto text-black">
 				<Hero />
 				<ExperienceAmulette />

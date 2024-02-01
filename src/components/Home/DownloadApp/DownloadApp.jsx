@@ -5,25 +5,26 @@ import { IoLogoGooglePlaystore } from "react-icons/io5";
 const DownloadApp = () => {
   return (
     <div className="download-app-wrapper">
-      <div className="download-app container mx-auto flex flex-row items-center justify-center">
-        <div className="col-left">
+      <div className="download-app container mx-auto flex flex-col lg:flex-row items-center justify-center mt-5 px-5 lg:px-0">
+        <div className="col-left w-full lg:w-1/2">
           <div
             style={{ background: "rgba(246, 95, 25, 0.10)" }}
-            className="amulette-available flex flex-row items-center justify-start border-[1px] border-primaryColor space-x-3 rounded-full px-2.5 py-2"
+            className="amulette-available w-full flex flex-col md:flex-row items-center justify-center md:justify-start border-[1px] border-primaryColor space-x-3 space-y-4 rounded-full px-2.5 py-2"
           >
             <span className="bg-primaryColor text-white font-semibold text-center text-sm px-10 py-1.5 rounded-full">
               Amulette
             </span>{" "}
             <span className=""> Is available Now on android and ios</span>
           </div>
-          <h1 className="download-the-app text-4xl font-bold font-Poppins mt-9">
+          <h1 className="download-the-app text-lg lg:text-4xl font-bold font-Poppins mt-9">
             Download The App
           </h1>
-          <p className="desc text-xl font-normal leading-9 mt-2">
+          <p className="desc text-[12px] lg:text-xl font-normal leading-5 lg:leading-9 mt-2">
             Express Yourself with Amulette. A compact, stylish, and customizable
             badge that showcases your unique personality.{" "}
           </p>
-          <div className="download-btns flex flex-row items-center justify-start space-x-7 mt-11">
+          <div className="download-btns flex flex-col md:flex-row items-center justify-center md:justify-start space-x-7 space-y-7
+           mt-11">
             <div  className="apple-btn flex flex-row items-center justify-center space-x-3.5 px-7 py-3 bg-primaryColor border border-primaryColor  rounded-full cursor-pointer">
               <div className="left">
                 <DiApple color="#fff" width={30} height={36} />
@@ -53,7 +54,7 @@ const DownloadApp = () => {
             </div>
           </div>
         </div>
-        <div className="col-right">
+        <div className="col-right w-full lg:w-1/2">
           <img src="Images/DownloadApp/Download-App-Right.svg" alt="" />
         </div>
       </div>

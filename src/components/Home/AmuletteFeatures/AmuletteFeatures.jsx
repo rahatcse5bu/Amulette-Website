@@ -25,8 +25,8 @@ const AmuletteFeatures = () => {
 ];
   return (
     <div style={{backgroundColor: 'rgba(246, 95, 25, 0.10)'}} className="amulette-service-wrapper py-14">
-      <div className="amulette-service container mx-auto">
-        <h1 className="lg:text-[40px] font-semibold font-Poppins text-center">
+      <div className="amulette-service container mx-auto px-5 lg:px-0">
+        <h1 className="text-xl lg:text-[40px] font-semibold font-Poppins text-center">
           <span className="text-primaryColor">Amulette </span>
           <span className="">
             Services
@@ -36,7 +36,7 @@ const AmuletteFeatures = () => {
           Empowering individuals to express themselves creatively through
           wearable technology.
         </p>
-        <div className="grid grid-cols-3 gap-4 lg:mt-[60px]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:mt-[60px]">
             {amuletteServices?.map((service,index)=>(
                 <AmuletteServiceCard key={index} service={service}/> )
 )}
