@@ -8,19 +8,24 @@ import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 
 const Header = () => {
-	const [isMobileMenuOpen,setIsMobileMenuOpen]=useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <div className="header-wrapper z-50 sticky top-0 bg-white">
-<DesktopHeader/>
+      <DesktopHeader />
       <div className="mobile-header bg-white lg:hidden flex flex-row items-center justify-between px-5 py-4">
         <div className="col-left">
-			{isMobileMenuOpen && (
-				<IoCloseSharp onClick={()=>setIsMobileMenuOpen(!isMobileMenuOpen)} size={26}/>
-			)}
-				{!isMobileMenuOpen && (
-          <RiMenu5Fill onClick={()=>setIsMobileMenuOpen(!isMobileMenuOpen)} size={26}
-			
-          /> )}
+          {isMobileMenuOpen && (
+            <IoCloseSharp
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              size={26}
+            />
+          )}
+          {!isMobileMenuOpen && (
+            <RiMenu5Fill
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              size={26}
+            />
+          )}
         </div>
         <div className="col-middle menu-items">
           <img src="Images/Header/Logo.svg" />
@@ -42,9 +47,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-{isMobileMenuOpen && ( 
-<MobileMenu/>
- )}
+      {isMobileMenuOpen && <MobileMenu />}
     </div>
   );
 };
