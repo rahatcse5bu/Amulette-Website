@@ -9,9 +9,9 @@ const DownloadApp = () => {
         <div className="col-left w-full lg:w-1/2">
           <div
             style={{ background: "rgba(246, 95, 25, 0.10)" }}
-            className="amulette-available w-full flex flex-col md:flex-row items-center justify-center md:justify-start border-[1px] border-primaryColor space-x-3 space-y-4 rounded-full px-2.5 py-2"
+            className="amulette-available w-full flex flex-row items-center justify-center text-[11px] lg:text-sm border-[1px] border-primaryColor space-x-3 rounded-full lg:px-2.5 py-2"
           >
-            <span className="bg-primaryColor text-white font-semibold text-center text-sm px-10 py-1.5 rounded-full">
+            <span className="bg-primaryColor text-white font-semibold text-center px-4 lg:px-10 py-1 lg:py-1.5 rounded-full">
               Amulette
             </span>{" "}
             <span className=""> Is available Now on android and ios</span>
@@ -23,32 +23,32 @@ const DownloadApp = () => {
             Express Yourself with Amulette. A compact, stylish, and customizable
             badge that showcases your unique personality.{" "}
           </p>
-          <div className="download-btns flex flex-col md:flex-row items-center justify-center md:justify-start space-x-7 space-y-7
+          <div className="download-btns flex flex--col flex-row items-center justify-between justify--start space-x-7
            mt-11">
-            <div  className="apple-btn flex flex-row items-center justify-center space-x-3.5 px-7 py-3 bg-primaryColor border border-primaryColor  rounded-full cursor-pointer">
+            <div  className="apple-btn flex flex-row items-center justify-center space-x-3.5 px-4 lg:px-7 py-2 lg:py-3 bg-primaryColor border border-primaryColor  rounded-full cursor-pointer">
               <div className="left">
-                <DiApple color="#fff" width={30} height={36} />
+                <DiApple className="w-[30px] h-9" color="#fff" width={30} height={36} />
               </div>
-              <div className="right flex flex-col items-center justify-center">
-                <p className="text-white text-sm font-Poppins font-medium">
+              <div className="right flex flex-col items-start justify-center">
+                <p className="text-white text-xs lg:text-sm font-Poppins font-medium">
                   Download on the
                 </p>
-                <h3 className="text-white text-lg font-Poppins font-bold">
+                <h3 className="text-white text-sm lg:text-lg font-Poppins font-bold">
                   Applestore
                 </h3>
               </div>
             </div>
-            <div className="android-btn flex flex-row items-center justify-center px-7 py-3 space-x-3.5 border border-[#455] rounded-full cursor-pointer">
+            <div className="android-btn flex flex-row items-center justify-center px-4 lg:px-7 py-2 lg:py-3 space-x-3.5 border border-[#455] rounded-full cursor-pointer">
               <div className="left">
-              <IoLogoGooglePlaystore color="#455" width={29} height={32}/>
+              <IoLogoGooglePlaystore  className="w-[29px] h-[32px]" color="#455" width={29} height={32}/>
 
               </div>
-              <div className="right flex flex-col items-center justify-center">
-                <p className="text-[#455] text-sm font-Poppins font-medium">
+              <div className="right flex flex-col items-start justify-center">
+                <p className="text-[#455] text-xs lg:text-sm font-Poppins font-medium">
                   Download on the
                 </p>
-                <h3 className="text-[#455] text-lg font-Poppins font-bold">
-                  Applestore
+                <h3 className="text-[#455] text-sm lg:text-lg font-Poppins font-bold">
+                  Playstore
                 </h3>
               </div>
             </div>
