@@ -16,7 +16,7 @@ const ProductCard = ({product}) => {
       <div className="usd-add-to-cart flex flex-row items-center justify-center space-x-9 mt-3.5">
         <span className="text-[#1C121F] text-sm  lg:text-lg font-semibold">${product.price}</span>
         <button className="bg-primaryColor text-white px-8 lg:px-10 py-2.5 lg:py-3.5 rounded-[50px]">
-        <div className="flex flex-row items-center justify-center space-x-1.5">  <IoCartOutline size={16} /> <span>Add to cart</span></div>
+        <div className="flex flex-row items-center justify-center space-x-1.5">  <IoCartOutline size={16} /> <span>Buy Now</span></div>
         </button>
       </div>
     </div>
