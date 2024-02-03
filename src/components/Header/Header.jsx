@@ -47,7 +47,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {isMobileMenuOpen && <MobileMenu />}
+      {isMobileMenuOpen && <MobileMenu isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen}/>}
     </div>
   );
 };
