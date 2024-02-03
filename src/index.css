@@ -2,9 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* fore header */
 .active-header span {
 	display: block;
 }
+
 .inactive-header > span {
 	display: none;
+}
+/* for animation of sidebar  */
+
+.active-sidebar-open {
+	animation: sideBarOpenAnimation 1s ease-in-out;
+}
+
+@keyframes sideBarOpenAnimation {
+	0% {
+		left: -1000px;
+	}
+	100% {
+		left: 0px;
+	}
+}
+.inactive-sidebar-open {
+	display: none;
+	animation: sidebarCloseAnimation 1s ease-in-out;
+}
+@keyframes sidebarCloseAnimation {
+	0% {
+		transform: translateX(0);
+		display: block;
+	}
+	100% {
+		transform: translateX(-100%);
+		display: block;
+	}
 }

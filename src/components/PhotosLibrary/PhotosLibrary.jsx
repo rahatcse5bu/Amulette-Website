@@ -78,6 +78,8 @@ const PhotosLibrary = () => {
 		setSideBarOpen((prev) => !prev);
 	};
 
+	console.log("side-bar-open", sideBarOpen);
+
 	return (
 		<div className="photos-library-wrapper ">
 			<div className="container flex flex-col items-start justify-between mx-auto md:space-x-8 md:px-0 px-0 md:bg-white bg-[#fdfdfd] photos-library md:flex-row">
@@ -97,9 +99,11 @@ const PhotosLibrary = () => {
 						inspiration.
 					</p>
 					<div className="search-wrapper relative items-center mt-7 flex justify-between">
-						{sideBarOpen && (
-							<PhotosLibrarySidebar sideBarHandler={sideBarHandler} />
-						)}
+						<PhotosLibrarySidebar
+							sideBarHandler={sideBarHandler}
+							sideBarOpen={sideBarOpen}
+						/>
+
 						<div
 							onClick={sideBarHandler}
 							className="block md:hidden px-6 py-4 h-[50px] bg-primaryColor rounded-2xl cursor-pointer "
