@@ -9,7 +9,7 @@ const DownloadApp = () => {
         <div className="col-left w-full lg:w-1/2">
           <div
             style={{ background: "rgba(246, 95, 25, 0.10)" }}
-            className="amulette-available w-full lg:w-[70%] flex flex-row items-center justify-center lg:justify-start text-[11px] lg:text-sm border-[1px] border-primaryColor space-x-3 rounded-full lg:px-2.5 py-2"
+            className="amulette-available w-full lg:w-[70%] flex flex-row items-center justify-start text-[11px] lg:text-sm border-[1px] border-primaryColor space-x-3 rounded-full px-1.5 lg:px-2.5 py-2"
           >
             <span className="bg-primaryColor text-white font-semibold text-center px-4 lg:px-10 py-1 lg:py-1.5 rounded-full">
               Amulette
@@ -30,7 +30,7 @@ const DownloadApp = () => {
                 <DiApple className="w-[30px] h-9" color="#fff" width={30} height={36} />
               </div>
               <div className="right flex flex-col items-start justify-center">
-                <p className="text-white text-xs lg:text-sm font-Poppins font-medium">
+                <p className="text-white text-[10px] md:text-xs lg:text-sm font-Poppins font-medium">
                   Download on the
                 </p>
                 <h3 className="text-white text-sm lg:text-lg font-Poppins font-bold">
@@ -44,7 +44,7 @@ const DownloadApp = () => {
 
               </div>
               <div className="right flex flex-col items-start justify-center">
-                <p className="text-[#455] text-xs lg:text-sm font-Poppins font-medium">
+                <p className="text-[#455] text-[10px] md:text-xs lg:text-sm font-Poppins font-medium">
                   Download on the
                 </p>
                 <h3 className="text-[#455] text-sm lg:text-lg font-Poppins font-bold">

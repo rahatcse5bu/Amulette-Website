@@ -1,13 +1,37 @@
-import React from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { setLicense } from "../../../redux/features/photoLibrary";
 
 const LicenseTabs = () => {
-    return (
-        <div className="license-tabs flex flex-row items-center justify-between space-x-6 bg-[#FFEFE8] rounded-full px-2.5 py-1.5 mt-5">
-        <div className="tab-item all bg-primaryColor text-white px-8 py-2 rounded-full cursor-pointer">All</div>
-        <div className="tab-item free cursor-pointer">Free</div>
-        <div className="tab-item premium cursor-pointer">Premium</div>
+  const dispatch = useDispatch();
+  const selectedLicense = useSelector((state) => state.license);
+  return (
+    <div className="license-tabs flex flex-row items-center justify-between space-x-6 bg-[#FFEFE8] rounded-full px-2.5 py-1.5 mt-5">
+      <div
+        onClick={dispatch(setLicense("all"))}
+        className={`tab-item all ${
+          selectedLicense === "all" ? "bg-primaryColor text-white" : ""
+        } px-8 py-2 rounded-full cursor-pointer`}
+      >
+        All
       </div>
-    );
+      <div
+        onClick={dispatch(setLicense("free"))}
+        className={`tab-item free ${
+          selectedLicense === "free" ? "bg-primaryColor text-white" : ""
+        } px-8 py-2 rounded-full cursor-pointer`}
+      >
+        Free
+      </div>
+      <div
+        onClick={dispatch(setLicense("all"))}
+        className={`tab-item premium ${
+          selectedLicense === "premium" ? "bg-primaryColor text-white" : ""
+        } px-8 py-2 rounded-full cursor-pointer`}
+      >
+        Premium
+      </div>
+    </div>
+  );
 };
 
 export default LicenseTabs;
