@@ -1,67 +1,20 @@
 import { FaCartPlus, FaMinus, FaPlus } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const ProductDetailsRightSide = () => {
-	const specifications = [
-		{
-			id: "1",
-			name: "Product Dimensions",
-			value: "3cm x 3cm x 0.5cm",
-		},
-		{
-			id: "2",
-			name: "Weight",
-			value: "12 Gram",
-		},
-		{
-			id: "3",
-			name: "Base Material",
-			value: "Carbon Steel",
-		},
-		{
-			id: "4",
-			name: "Stape",
-			value: "Square",
-		},
-		{
-			id: "5",
-			name: "Color",
-			value: "Black",
-		},
-	];
-	const descriptions = [
-		{
-			id: "1",
-			description:
-				"Seamlessly pair with your smartphone via Bluetooth for easy image transfer.",
-		},
-		{
-			id: "2",
-			description:
-				"Compact and lightweight, the Amulette Device attaches easily to any surface, turning it into a canvas for your creativity.",
-		},
-		{
-			id: "3",
-			description:
-				"Choose from your photo library to display images that reflect your mood, experiences, and passions.",
-		},
-		{
-			id: "4",
-			description:
-				"Crystal-clear image quality ensures your photos look vibrant and sharp, enhancing the visual impact of your wearable art.",
-		},
-	];
+
+	const {singleProduct}=useSelector((state)=>state.product )
 	return (
 		<div className="md:w-[50%] w-full md:mt-0 mt-5">
 			{/* product general information */}
 			<h1 className="text-zinc-900 text-[25px] mb-[23px] font-semibold font-['Poppins'] leading-normal">
-				Amulette Device{" "}
+				{singleProduct?.title}{" "}
 			</h1>
 			<p className=" text-zinc-800 mb-[34px] text-[15px] font-normal font-['Poppins'] leading-7 tracking-tight">
-				A card-sized device that turns your memories into wearable art. Showcase
-				your unique style with this compact, customizable badge.
+			{singleProduct?.shortDescription}
 			</p>
 			<h3 className="text-zinc-900 mb-[44px] md:block hidden text-3xl font-bold font-['Poppins'] leading-[30.89px]">
-				$ 50.00
+				$ {singleProduct?.price}
 			</h3>
 			{/* button section */}
 			<div className="flex items-center mb-[40px] md:justify-start justify-between flex-row">
@@ -75,7 +28,7 @@ const ProductDetailsRightSide = () => {
 					</button>
 				</div>
 				<h3 className="text-zinc-900  md:hidden inline-block md:text-3xl font-bold text-xl font-['Poppins'] leading-[30.89px]">
-					$ 50.00
+					$ {singleProduct?.price}
 				</h3>
 				<div className="ml-0 md:ml-10">
 					<button className="md:w-[237.90px] w-[200px] flex items-center justify-center px-5 md:h-[61px] h-[50px] bg-orange-600 rounded-[65.36px]">
@@ -91,7 +44,7 @@ const ProductDetailsRightSide = () => {
 				Specifications
 			</h4>
 			<table className="mb-[40px]">
-				{specifications.map((item) => (
+				{singleProduct?.specifications?.map((item) => (
 					<tr key={item.id}>
 						<td className="pr-4">{item.name}</td>
 						<td>{item.value}</td>
@@ -107,7 +60,7 @@ const ProductDetailsRightSide = () => {
 					listStyle: "circle",
 				}}
 			>
-				{descriptions.map((item) => {
+				{singleProduct?.descriptions?.map((item) => {
 					return (
 						<li className="mt-2" key={item.id}>
 							{item.description}

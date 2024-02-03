@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
 import { IoCartOutline } from "react-icons/io5";
+import { useDispatch } from "react-redux";
+import { setSingleProduct } from "../../../redux/features/products";
 
 const ProductCard = ({ product, setShowModal }) => {
+  const dispatch =useDispatch();
 	const showModalHandler = () => {
-		setShowModal((prev) => !prev);
+
+    dispatch(setSingleProduct(product));
+    setShowModal((prev) => !prev);
 	};
 	return (
 		<div className="flex flex-col items-center justify-center py-6 border border-black product-card border-opacity-20 rounded-3xl">

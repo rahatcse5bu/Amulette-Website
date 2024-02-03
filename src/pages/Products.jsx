@@ -60,7 +60,7 @@ const ProductsPage = () => {
 					<div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4 mt-9">
 						{filteredProducts.length > 0 &&
 							filteredProducts?.map((data, index) => (
-								<ProductCard
+								<ProductCard 
 									setShowModal={setShowModal}
 									key={index}
 									product={data}
@@ -84,7 +84,7 @@ const ProductsPage = () => {
 								/>
 							</div>
 						</div>
-						<ProductDetailsPage />
+						<ProductDetailsPage  />
 					</div>
 				</div>
 			)}

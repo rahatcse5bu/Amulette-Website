@@ -5,13 +5,14 @@ import { Colors } from "../../constants/colors";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 const ProductDetailsLeftSide = () => {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 	const handleResize = () => {
 		setWindowWidth(window.innerWidth);
 	};
-
+	const {singleProduct}=useSelector((state)=>state.product )
 	useEffect(() => {
 		// Add event listener when component mounts
 		window.addEventListener("resize", handleResize);
@@ -41,28 +42,28 @@ const ProductDetailsLeftSide = () => {
 		},
 	};
 
-	const images = [
-		{
-			id: 1,
-			images: image,
-		},
-		{
-			id: 2,
-			images: image,
-		},
-		{
-			id: 3,
-			images: image,
-		},
-		{
-			id: 4,
-			images: image,
-		},
-		{
-			id: 5,
-			images: image,
-		},
-	];
+	// const images = [
+	// 	{
+	// 		id: 1,
+	// 		image: image,
+	// 	},
+	// 	{
+	// 		id: 2,
+	// 		image: image,
+	// 	},
+	// 	{
+	// 		id: 3,
+	// 		image: image,
+	// 	},
+	// 	{
+	// 		id: 4,
+	// 		image: image,
+	// 	},
+	// 	{
+	// 		id: 5,
+	// 		image: image,
+	// 	},
+	// ];
 
 	const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
 		const {
@@ -83,7 +84,7 @@ const ProductDetailsLeftSide = () => {
 				<button
 					style={{
 						backgroundColor:
-							currentSlide === images.length - 1 ? "#979898" : Colors.primary,
+							currentSlide === singleProduct?.images?.length - 1 ? "#979898" : Colors.primary,
 					}}
 					className="absolute top-[50%] flex justify-center items-center md:right-[25px] -right-4  w-[50px] h-[50px] rounded-full z-50"
 					onClick={() => next()}
@@ -114,7 +115,7 @@ const ProductDetailsLeftSide = () => {
 				onClick={() => onClick()}
 			>
 				<img
-					src={images[currentSlide].images}
+					src={singleProduct?.images[currentSlide]?.image}
 					className="w-full h-full"
 					alt=""
 				/>
@@ -136,13 +137,13 @@ const ProductDetailsLeftSide = () => {
 				containerClass="md:py-10 md:h-[750px] h-auto  md:mb-10"
 				customDot={<CustomDot />}
 			>
-				{images.map((item) => {
+				{singleProduct?.images?.map((item) => {
 					return (
 						<div
 							key={item.id}
 							className=" rounded-md md:w-[480px] w-full md:mb-[180px] mb-0 md:mt-[20px] md:h-[calc(650px)] h-auto bg-[#F6F6F6]  mx-auto"
 						>
-							<img src={item.images} alt="" className="w-full h-full" />
+							<img src={item.image} alt="" className="w-full h-full" />
 						</div>
 					);
 				})}
