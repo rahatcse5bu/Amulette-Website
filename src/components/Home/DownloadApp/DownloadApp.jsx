@@ -23,14 +23,14 @@ const DownloadApp = () => {
             Express Yourself with Amulette. A compact, stylish, and customizable
             badge that showcases your unique personality.{" "}
           </p>
-          <div className="download-btns flex  flex-row items-center justify-between lg:justify-start space-x-7
+          <div className="download-btns flex  flex-row items-center justify-between md:justify-start lg:justify-start space-x-7
            mt-11">
-            <div  className="apple-btn flex flex-row items-center justify-center space-x-3.5 px-4 lg:px-7 py-2 lg:py-3 bg-primaryColor border border-primaryColor  rounded-full cursor-pointer">
+            <div  className="apple-btn flex flex-row items-center justify-center space-x-2 lg:space-x-3.5 px-4 lg:px-7 py-2 lg:py-3 bg-primaryColor border border-primaryColor  rounded-full cursor-pointer">
               <div className="left">
                 <DiApple className="w-[30px] h-9" color="#fff" width={30} height={36} />
               </div>
               <div className="right flex flex-col items-start justify-center">
-                <p className="text-white text-[10px] md:text-xs lg:text-sm font-Poppins font-medium">
+                <p className="text-white text-[9px] md:text-xs lg:text-sm font-Poppins font-medium">
                   Download on the
                 </p>
                 <h3 className="text-white text-sm lg:text-lg font-Poppins font-bold">
@@ -38,13 +38,13 @@ const DownloadApp = () => {
                 </h3>
               </div>
             </div>
-            <div className="android-btn flex flex-row items-center justify-center px-4 lg:px-7 py-2 lg:py-3 space-x-3.5 border border-[#455] rounded-full cursor-pointer">
+            <div className="android-btn flex flex-row items-center justify-center px-4 lg:px-7 py-2 lg:py-3 space-x-2 lg:space-x-3.5 border border-[#455] rounded-full cursor-pointer">
               <div className="left">
               <IoLogoGooglePlaystore  className="w-[29px] h-[32px]" color="#455" width={29} height={32}/>
 
               </div>
               <div className="right flex flex-col items-start justify-center">
-                <p className="text-[#455] text-[10px] md:text-xs lg:text-sm font-Poppins font-medium">
+                <p className="text-[#455] text-[9px] md:text-xs lg:text-sm font-Poppins font-medium">
                   Download on the
                 </p>
                 <h3 className="text-[#455] text-sm lg:text-lg font-Poppins font-bold">

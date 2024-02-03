@@ -5,7 +5,7 @@ const MobileMenu = () => {
   return (
     <div className="mobile-menu-wrapper lg:hidden z-50">
       <div className="mobile-menu">
-        <ul className="flex flex-col items-center justify-center space-y-12 text-lg pb-5">
+        <ul className="flex flex-col items-center justify-center space-y-12 text-lg pb-9">
           {/* <li className=''><NavLink to='/' className=''>Home</NavLink></li>
                 <li className=''><NavLink to='/photos-library' className=''>Photo Gallery</NavLink></li>
                 <li className=''><NavLink to='/products' className=''>Products</NavLink></li>
