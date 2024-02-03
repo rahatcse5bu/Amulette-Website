@@ -25,7 +25,7 @@ const ProductsPage = () => {
 
 	return (
 		<>
-			<div className="product-page bg-[#FDFDFD] pt-7">
+			<div className="product-page bg-[#FDFDFD] lg:pt-7">
 				<div className="container px-5 mx-auto products-wrapper lg:px-0">
 					<h1 className="text-xl font-bold text-left lg:text-2xl">
 						<span className="text-[#25282B]">Amulette</span>
@@ -75,7 +75,7 @@ const ProductsPage = () => {
 
 			{showModal && (
 				<div className="fixed inset-0 bg-[rgba(0,0,0,0.3)] z-[99999] flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-					<div className="relative w-[90%] h-[90vh] overflow-y-auto bg-white z-[9999] my-6 rounded-md mx-auto">
+					<div className="relative w-[90%] h-[90vh] overflow-y-auto  bg-white z-[9999] my-6 rounded-md mx-auto">
 						<div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
 							<div className="absolute top-2 right-2 ">
 								<BsXCircle

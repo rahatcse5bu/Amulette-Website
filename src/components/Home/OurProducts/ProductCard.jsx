@@ -13,7 +13,7 @@ const ProductCard = ({ product, setShowModal }) => {
 			>
 				<img src={`${product.img}`} alt="" height={221} />
 			</div>
-			<h3 className="title text-[1C121F] text-sm lg:text-lg font-semibold font-Poppins">
+			<h3 	onClick={showModalHandler} className="title text-[1C121F] text-sm lg:text-lg font-semibold font-Poppins">
 				{product.title}
 			</h3>
 			<p className="desc text-[9px] lg:text-xs text-[#1C121F] font-normal font-Poppins mt-2">
