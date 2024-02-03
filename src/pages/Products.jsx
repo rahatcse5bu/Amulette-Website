@@ -25,7 +25,7 @@ const ProductsPage = () => {
 
 	return (
 		<>
-			<div className="product-page bg-[#FDFDFD] lg:pt-7">
+			<div className="product-page bg-[#FDFDFD] pt-6 lg:pt-7">
 				<div className="container px-5 mx-auto products-wrapper lg:px-0">
 					<h1 className="text-xl font-bold text-left lg:text-2xl">
 						<span className="text-[#25282B]">Amulette</span>
