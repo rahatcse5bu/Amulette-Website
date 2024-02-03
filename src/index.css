@@ -13,7 +13,7 @@
 /* for animation of sidebar  */
 
 .active-sidebar-open {
-	animation: sideBarOpenAnimation 1s ease-in-out;
+	animation: sideBarOpenAnimation 500ms ease-in-out;
 }
 
 @keyframes sideBarOpenAnimation {
