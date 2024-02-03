@@ -9,6 +9,9 @@ export default {
 				headingColor:'#25282B',
 				categoryTabColor:'rgba(246, 95, 25, 0.10)',
 			},
+			backgroundImage:{
+				heroDesktop: `url('Images/Hero/Hero-BG.svg')`,
+			},
 			fontFamily: {
 				Montserrat: ['Montserrat', 'sans-serif'],
 				Poppins: ['Poppins', 'sans-serif'],

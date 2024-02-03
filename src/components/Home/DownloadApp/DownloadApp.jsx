@@ -23,7 +23,7 @@ const DownloadApp = () => {
             Express Yourself with Amulette. A compact, stylish, and customizable
             badge that showcases your unique personality.{" "}
           </p>
-          <div className="download-btns flex  flex-row items-center justify-between lg:justify-start space-x-7
+          <div className="download-btns flex  flex-row items-center justify-between md:justify-start lg:justify-start space-x-7
            mt-11">
             <div  className="apple-btn flex flex-row items-center justify-center space-x-3.5 px-4 lg:px-7 py-2 lg:py-3 bg-primaryColor border border-primaryColor  rounded-full cursor-pointer">
               <div className="left">

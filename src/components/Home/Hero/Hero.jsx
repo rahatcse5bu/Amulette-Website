@@ -2,10 +2,10 @@
 const Hero = () => {
   return (
     <div
-      style={{ backgroundImage: `url('Images/Hero/Hero-BG.svg')` }}
-      className="hero-wrapper bg-cover bg-center pt-[50px] lg:pt-[160px] pb-[70px] lg:pb-[180px] "
+      // style={{ backgroundImage: `url('Images/Hero/Hero-BG.svg')` }}
+      className="hero-wrapper lg:bg-heroDesktop bg-cover bg-center pt-[50px] lg:pt-[160px] pb-[70px] lg:pb-[180px] "
     >
-      <div className="hero container mx-auto  flex flex-col items-start justify-start px-5 lg:px-0">
+      <div className="hero container mx-auto  flex flex-col items-start justify-center lg:justify-start px-5 lg:px-0">
         <h3 className="text-left capitalize text-primaryColor font-Poppins font-bold text-sm lg:text-xl">
           Express Yourself with Amulette
         </h3>
@@ -26,6 +26,9 @@ const Hero = () => {
           <button className="text-sm lg:text-xl font-Poppins font-medium text-primaryColor hover:bg-primaryColor hover:text-white border border-primaryColor px-8 md:px-12 lg:px-[76px] py-2 md:py-3 lg:py-4 rounded-lg">
             Get The App
           </button>
+        </div>
+        <div className="lg:hidden flex flex-row items-center justify-center">
+          <img src="Images/Hero/Mobile-Hero-BG.svg"/>
         </div>
       </div>
     </div>
