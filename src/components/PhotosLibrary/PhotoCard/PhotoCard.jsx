@@ -8,7 +8,7 @@ const PhotoCard = ({ photo }) => {
 				</div>
 			)}
 			<img
-				className=" w-full h-full rounded-2xl border border-[#E5E5E4]"
+				className=" w-[200px] h-[200px] rounded-2xl border border-[#E5E5E4]"
 				src={`${photo.photo}`}
 			/>
 		</div>
