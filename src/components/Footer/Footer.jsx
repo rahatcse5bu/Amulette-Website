@@ -5,9 +5,14 @@ import StayWithUs from "./StayWithUs/StayWithUs";
 const Footer = () => {
   return (
     <div className="footer">
-      <StayWithUs />
+         <div className="stay-with-us-wrapper desktop hiddnen lg::block">
+         <StayWithUs />
+         </div>
       <div className="footer-wrapper relative bg-[#25282B] lg:pt-[100px] lg:pb-[70px] ">
         <div className="container mx-auto px-0 footer-main flex flex-col lg:flex-row items-center lg:items-start justify-between text-white">
+         {/* <div className="stay-with-us-wrapper block lg:hidden">
+         <StayWithUs />
+         </div> */}
           <DesktopFooter />
           <MobileFooter />
         </div>

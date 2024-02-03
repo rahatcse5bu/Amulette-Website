@@ -33,7 +33,7 @@ const DownloadApp = () => {
                 <p className="text-white text-[9px] md:text-xs lg:text-sm font-Poppins font-medium">
                   Download on the
                 </p>
-                <h3 className="text-white text-sm lg:text-lg font-Poppins font-bold">
+                <h3 className="text-white text-xs md:text-sm lg:text-lg font-Poppins font-bold">
                   Applestore
                 </h3>
               </div>
@@ -47,7 +47,7 @@ const DownloadApp = () => {
                 <p className="text-[#455] text-[9px] md:text-xs lg:text-sm font-Poppins font-medium">
                   Download on the
                 </p>
-                <h3 className="text-[#455] text-sm lg:text-lg font-Poppins font-bold">
+                <h3 className="text-[#455] text-xs md:text-sm lg:text-lg font-Poppins font-bold">
                   Playstore
                 </h3>
               </div>
