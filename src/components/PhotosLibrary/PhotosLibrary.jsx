@@ -13,8 +13,8 @@ const PhotosLibrary = () => {
 	const [sideBarOpen, setSideBarOpen] = useState(false);
 	const [searchKeyword, setSearchKeyword] = useState("");
 	const [filteredPhotos, setFilteredPhotos] = useState(photos);
-	const selectedCategory = useSelector((state) => state.photo);
-	const selectedLicense = useSelector((state) => state.photo);
+    const { license,category } = useSelector((state) => state.photo);
+
 	function searchPhotos(photos, searchTerm) {
 		// Convert the search term to lower case for case-insensitive comparison
 		const lowerCaseSearchTerm = searchTerm.toLowerCase();
@@ -32,8 +32,8 @@ const PhotosLibrary = () => {
 			const metaDataMatch = photo.metaData
 				.toLowerCase()
 				.includes(lowerCaseSearchTerm);
-			const matchedCat = photo.category.includes(selectedCategory);
-			const matchedLicense = photo.license.includes(selectedLicense);
+			const matchedCat = photo.category.includes(category);
+			const matchedLicense = photo.license.includes(license);
 			// Return true if the search term matches any of the fields, causing this photo to be included in the filter result
 			return (
 				titleMatch ||

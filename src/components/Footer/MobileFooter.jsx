@@ -86,12 +86,12 @@ const MobileFooter = () => {
             <li className="flex flex-row items-center justify-start space-x-3">
               <img
                 className="lg:mr-4"
-                src={"Images/Footer/Linkedin.svg"}
+                src={"Images/Footer/Instagram.svg"}
                 width={24}
                 height={24}
                 alt=""
               />
-              <a href={""}>LinkedIn</a>
+              <a href={""}>Instagram</a>
             </li>
           </ul>
         </div>

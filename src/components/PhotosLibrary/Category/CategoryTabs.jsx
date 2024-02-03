@@ -4,8 +4,9 @@ import { setCategory } from "../../../redux/features/photoLibrary";
 const CategoryTabs = () => {
 	const dispatch = useDispatch();
 	//   const category = useSelector((state) => state.photo);
-	const category = useSelector((state) => state.photo);
-	console.log("category", category);
+	// const category = useSelector((state) => state.photo);
+    const { category } = useSelector((state) => state.photo);
+	// console.log("category", category);
 	return (
 		<div className="flex flex-col items-center justify-center mt-5 space-y-4 category-tabs ">
 			<div

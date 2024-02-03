@@ -24,7 +24,7 @@ const LicenseTabs = () => {
 				Free
 			</div>
 			<div
-				onClick={() => dispatch(setLicense("all"))}
+				onClick={() => dispatch(setLicense("premium"))}
 				className={`tab-item premium ${
 					license === "premium" ? "bg-primaryColor text-white" : ""
 				} px-8 py-2 rounded-full cursor-pointer`}
