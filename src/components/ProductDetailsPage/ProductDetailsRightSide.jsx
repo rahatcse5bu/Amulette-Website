@@ -81,7 +81,7 @@ const ProductDetailsRightSide = () => {
 					<button className="md:w-[237.90px] w-[200px] flex items-center justify-center px-5 md:h-[61px] h-[50px] bg-orange-600 rounded-[65.36px]">
 						<FaCartPlus className="w-4 h-4 text-white" />
 						<strong className="ml-2 text-base text-white md:text-lg">
-							Add to Cart
+							Buy Now
 						</strong>
 					</button>
 				</div>

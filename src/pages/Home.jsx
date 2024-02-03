@@ -5,12 +5,14 @@ import OurProducts from "../components/Home/OurProducts/OurProducts";
 import CoreValues from "../components/Home/CoreValues/CoreValues";
 import DownloadApp from "../components/Home/DownloadApp/DownloadApp";
 import ContactUs from "../components/Home/ContactUs/ContactUs";
-
+import { useSelector } from "react-redux";
 
 const Home = () => {
+	const { value } = useSelector((state) => state.counter);
+	console.log("counter~", value);
 	return (
 		<div className="home-wrapper bg-[#FDFDFD] pt--7">
-			<div className="home containerr mx-auto text-black">
+			<div className="mx-auto text-black home containerr">
 				<Hero />
 				<ExperienceAmulette />
 				<AmuletteFeatures />
@@ -18,7 +20,6 @@ const Home = () => {
 				<CoreValues />
 				<DownloadApp />
 				<ContactUs />
-			
 			</div>
 		</div>
 	);
