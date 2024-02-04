@@ -11,7 +11,7 @@ const LicenseTabs = () => {
 				onClick={() => dispatch(setLicense("all"))}
 				className={`tab-item all ${
 					license === "all" ? "bg-primaryColor text-white" : ""
-				} px-8 py-2 rounded-full cursor-pointer`}
+				} px-4 py-2 rounded-full cursor-pointer`}
 			>
 				All
 			</div>
@@ -19,7 +19,7 @@ const LicenseTabs = () => {
 				onClick={() => dispatch(setLicense("free"))}
 				className={`tab-item free ${
 					license === "free" ? "bg-primaryColor text-white" : ""
-				} px-8 py-2 rounded-full cursor-pointer`}
+				} px-4 py-2 rounded-full cursor-pointer`}
 			>
 				Free
 			</div>
@@ -27,7 +27,7 @@ const LicenseTabs = () => {
 				onClick={() => dispatch(setLicense("premium"))}
 				className={`tab-item premium ${
 					license === "premium" ? "bg-primaryColor text-white" : ""
-				} px-8 py-2 rounded-full cursor-pointer`}
+				} px-4 py-2 rounded-full cursor-pointer`}
 			>
 				Premium
 			</div>
