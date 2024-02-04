@@ -11,7 +11,7 @@ const PhotoCard = ({ photo }) => {
 				</div>
 			)}
 			<img
-				className="w-[121px] h-[121px] lg:w-[200px] lg:h-[200px] rounded-2xl border border-[#E5E5E4]"
+				className="w-full h-full lg:w-[200px] lg:h-[200px] rounded-2xl border border-[#E5E5E4]"
 				src={`${photo.photo}`}
 			/>
 		</div>
