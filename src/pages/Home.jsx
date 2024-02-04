@@ -11,7 +11,7 @@ const Home = () => {
 	const { value } = useSelector((state) => state.counter);
 	console.log("counter~", value);
 	return (
-		<div className="home-wrapper bg-[#FDFDFD] pt--7">
+		<div className="home-wrapper bg-[#FDFDFD] pt--7 overflow-hidden">
 			<div className="mx-auto text-black home">
 				<Hero />
 				<ExperienceAmulette />
