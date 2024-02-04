@@ -2,23 +2,33 @@
 import { IoCartOutline } from "react-icons/io5";
 import { useDispatch } from "react-redux";
 import { setSingleProduct } from "../../../redux/features/products";
+import classNames from "classnames";
 
-const ProductCard = ({ product, setShowModal }) => {
-  const dispatch =useDispatch();
+const ProductCard = ({ product, setShowModal, ourProductSlide }) => {
+	const dispatch = useDispatch();
 	const showModalHandler = () => {
-
-    dispatch(setSingleProduct(product));
-    setShowModal((prev) => !prev);
+		dispatch(setSingleProduct(product));
+		setShowModal((prev) => !prev);
 	};
 	return (
-		<div className="flex flex-col items-center justify-center py-6 border border-black product-card border-opacity-20 rounded-3xl">
+		<div
+			className={classNames(
+				"flex flex-col items-center justify-center py-6 border border-black product-card border-opacity-20 rounded-3xl",
+				{
+					"w-[150px]": ourProductSlide === true,
+				}
+			)}
+		>
 			<div
 				onClick={showModalHandler}
 				className="img-wrapper px-[30px] py-[15px] border border-[#F6F6F6] bg-[#F6F6F6] rounded-2xl"
 			>
 				<img src={`${product.img}`} alt="" height={221} />
 			</div>
-			<h3 	onClick={showModalHandler} className="title text-[1C121F] text-sm lg:text-lg font-semibold font-Poppins">
+			<h3
+				onClick={showModalHandler}
+				className="title text-[1C121F] text-sm lg:text-lg font-semibold font-Poppins"
+			>
 				{product.title}
 			</h3>
 			<p className="desc text-[9px] lg:text-xs text-[#1C121F] font-normal font-Poppins mt-2">
@@ -31,7 +41,7 @@ const ProductCard = ({ product, setShowModal }) => {
 				<button className="bg-primaryColor text-white px-8 lg:px-10 py-2.5 lg:py-3.5 rounded-[50px]">
 					<div className="flex flex-row items-center justify-center space-x-1.5">
 						{" "}
-						<IoCartOutline size={16} /> <span>Add to cart</span>
+						<IoCartOutline size={16} /> <span>Buy Now</span>
 					</div>
 				</button>
 			</div>
