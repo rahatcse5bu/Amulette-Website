@@ -52,7 +52,7 @@ const OurProducts = ({isOurProduct=true}) => {
           <PrevButtonCustomCF prevRef={prevRef} disabled={isPrevDisabled} />
           <NextButtonCustomEB nextRef={nextRef} disabled={isNextDisabled} />
 
-          <Carousel className="mx-auto mt-6 md:mt-16 exclusive-business-slider relative z-0"
+          <Carousel className="mx-auto mt-6 md:mt-16 exclusive-business-slider relative z--0"
             //        partialVisible={false}
             swipeable={true}
             draggable={true}

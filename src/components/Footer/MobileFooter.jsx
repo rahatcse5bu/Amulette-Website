@@ -1,6 +1,4 @@
 
-import React from "react";
-
 const MobileFooter = () => {
   return (
     <div className="lg:hidden flex flex-col items-center justify-center pt-[136px] lg:pt-0">
@@ -10,14 +8,11 @@ const MobileFooter = () => {
           src={"Images/Footer/Footer-Logo.svg"}
           width={224}
           height={50}
-          alt="FCFL logo"
+          alt="Amulette logo"
         />
         <p className="font-Montserrat text-xs  px-5 font-normal leading-8 tracking-[0.129px] text-center">
-          We invite you to join us on this exciting journey of exploration and
-          luxury. Whether you{"'"}re a frequent flyer or planning a special
-          trip,
-          {"'"}First Class For Less{"'"} is here to elevate your travel
-          experience without compromising on your budget
+        Express Yourself with Amulette.
+A compact, stylish, and customizable badge that showcases your unique personality. 
         </p>
       </div>
       <div className="about-follow-us w-full px-11 flex flex-row items-center justify-between mt-9 mb-11">
