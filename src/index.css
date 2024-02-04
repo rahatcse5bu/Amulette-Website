@@ -38,3 +38,20 @@
 		display: block;
 	}
 }
+
+@media screen and (max-width: 370px) {
+	.email-subscribe {
+		flex-direction: column;
+	}
+	.email-subscribe input {
+		width: 100%;
+	}
+	.email-subscribe button {
+		width: 100% !important;
+		margin-top: 10px;
+		margin-left: 0px !important;
+	}
+	.stay-with-us {
+		padding: 4px;
+	}
+}
