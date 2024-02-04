@@ -12,7 +12,7 @@ const Home = () => {
 	console.log("counter~", value);
 	return (
 		<div className="home-wrapper bg-[#FDFDFD] pt--7">
-			<div className="mx-auto text-black home containerr">
+			<div className="mx-auto text-black home">
 				<Hero />
 				<ExperienceAmulette />
 				<AmuletteFeatures />

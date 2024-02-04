@@ -5,11 +5,11 @@ import { IoLogoGooglePlaystore } from "react-icons/io5";
 const DownloadApp = () => {
   return (
     <div className="download-app-wrapper">
-      <div className="download-app container mx-auto flex flex-col lg:flex-row items-center justify-center mt-5 px-5 lg:px-0">
+      <div className="download-app containerr max-w-amulette lg:px-amulette mx-auto flex flex-col lg:flex-row items-center justify-center mt-5 px-5 lg:px--0">
         <div className="col-left w-full lg:w-1/2">
           <div
             style={{ background: "rgba(246, 95, 25, 0.10)" }}
-            className="amulette-available w-full lg:w-[70%] flex flex-row items-center justify-start text-[11px] lg:text-sm border-[1px] border-primaryColor space-x-3 rounded-full px-1.5 lg:px-2.5 py-2"
+            className="amulette-available w-full lg:w--[70%] flex flex-row items-center justify-start text-[11px] lg:text-sm border-[1px] border-primaryColor space-x-3 rounded-full px-1.5 lg:px-2.5 py-2"
           >
             <span className="bg-primaryColor text-white font-semibold text-center px-4 lg:px-10 py-1 lg:py-1.5 rounded-full">
               Amulette

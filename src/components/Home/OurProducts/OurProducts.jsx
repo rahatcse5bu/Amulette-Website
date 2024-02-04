@@ -38,7 +38,7 @@ const OurProducts = ({ isOurProduct = true }) => {
 	};
 	return (
 		<div className="our-products-wrapper mt-[52px]">
-			<div className="our-products container mx-auto px-5 lg:px-0">
+			<div className="our-products containerr max-w-amulette lg:px-amulette mx-auto px-5 ">
 				{isOurProduct && (
 					<h1 className="text-xl lg:text-[40px] font-semibold font-Poppins text-center mb-5">
 						<span className="text-primaryColor">Our </span>
@@ -51,7 +51,7 @@ const OurProducts = ({ isOurProduct = true }) => {
 					<NextButtonCustomEB nextRef={nextRef} disabled={isNextDisabled} />
 
 					<Carousel
-						className="mx-auto mt-6 md:mt-16 exclusive-business-slider relative z--0"
+						className="mx-auto mt-6 md:mt-16  relative z--0"
 						//        partialVisible={false}
 						swipeable={true}
 						draggable={true}

@@ -6,7 +6,7 @@ const LicenseTabs = () => {
 	const { license, category } = useSelector((state) => state.photo);
 
 	return (
-		<div className="license-tabs flex flex-row items-center justify-between space-x-6 bg-[#FFEFE8] rounded-full px-2.5 py-1.5 mt-5">
+		<div className="license-tabs w-full flex flex-row items-center justify-between space-x-4 bg-[#FFEFE8] rounded-full px-2.5 py-1.5 mt-5">
 			<div
 				onClick={() => dispatch(setLicense("all"))}
 				className={`tab-item all ${

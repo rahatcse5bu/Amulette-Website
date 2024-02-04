@@ -1,15 +1,18 @@
-import React from "react";
 
 const ContactUs = () => {
 	return (
-		<div className="contact-us-wrapper">
-			<div className="container mx-auto contact-us flex flex-col items-center justify-center px-5 lg:px-0">
+		<div className="contact-us-wrapper pt-6 lg:pt-7"
+		style={{
+			backgroundImage:"linear-gradient(180deg, rgba(246, 95, 25, 0.10) 0%, rgba(246, 95, 25, 0.01) 100%)",
+	}}
+		>
+			<div className="containerr max-w-amulette lg:px-amulette mx-auto contact-us flex flex-col items-center justify-center px-5 lg:px--0">
 				<h1 className="text-center font-Poppins text-xl lg:text-[40px] font-bold">
 					Contact Us for any Queries
 				</h1>
 				<div className="flex flex-row items-center justify-center amulette-assist-wrapper">
-					<div className="amulette-assist flex flex-row items-center justify-start bg-[#D9D9D9] border-[1px] border-[#D9D9D9] space-x-3 rounded-full px-2.5 py-2 mt-10">
-						<span className="bg-primaryColor text-white font-semibold text-center text-sm px-10 py-1.5 rounded-full">
+					<div className="amulette-assist flex flex-row items-center justify-start bg-white border-[1px] border-[#D9D9D9] space-x-3 rounded-full px-2.5 py-2 mt-10">
+						<span className="bg-primaryColor text-white font-semibold text-center text-xs sm:text-xs px-6 lg:px-10 py-1.5 rounded-full">
 							Amulette
 						</span>{" "}
 						<span className=""> Is happy to assist you!</span>

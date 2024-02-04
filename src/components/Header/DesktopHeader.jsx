@@ -3,7 +3,7 @@ import { menuItems } from "../../constants/constant-data";
 
 const DesktopHeader = () => {
   return (
-    <div className="container hidden lg:flex flex-row items-center justify-around py-6 mx-auto header">
+    <div className="containerr max-w-amulette lg:px-amulette hidden lg:flex flex-row items-center justify-between py-6 mx-auto header">
       <div className="logo">
         <img src="Images/Header/Logo.svg" alt="amulette logo" />
       </div>

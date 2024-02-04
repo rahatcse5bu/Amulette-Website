@@ -14,7 +14,7 @@ const ExperienceAmulette = () => {
       }}
       className="experience-amulette-wrapper mt-9 pb-9"
     >
-      <div className="experience-amulette container mx-auto flex flex-col lg:flex-row items-center justify-center space-y-8 px-5 lg:px-0">
+      <div className="experience-amulette containerr max-w-amulette lg:px-amulette mx-auto flex flex-col lg:flex-row items-center justify-center space-y-8 px-5">
         <div className="col-left flex flex-col items-start justify-center">
           <h1 className="text-xl lg:text-3xl font-bold">
             <span className="">Experience </span>

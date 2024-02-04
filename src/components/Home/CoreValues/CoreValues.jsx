@@ -8,7 +8,7 @@ const CoreValues = () => {
 				background: ` linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Images/CoreValues/Core-Value-Without-Overlay.png') center / cover no-repeat`,
 			}}
 		>
-			<div className=" container mx-auto flex flex-col items-center justify-center pt-7 lg:pt-[60px] pb-8 lg:pb-[66px] px-5 lg:px-0">
+			<div className=" containerr max-w-amulette lg:px-amulette mx-auto flex flex-col items-center justify-center pt-7 lg:pt-[60px] pb-8 lg:pb-[66px] px-5 lg:px--0">
 				<h3 className="title text-white font-semibold text-xl lg:text-[40px]">
 					Our Core Values
 				</h3>

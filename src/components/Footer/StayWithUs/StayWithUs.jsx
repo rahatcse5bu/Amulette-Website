@@ -12,7 +12,7 @@ const StayWithUs = () => {
 			}}
 			className="stay-with-us-wrapper w-full mt-[50px] lg:mt-[74px] py-8 lg:pb-16"
 		>
-			<div className="stay-with-us lg:container mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between bg-[#FFEFE8] rounded-2xl px-5 lg:px-16 py-8 lg:py-14">
+			<div className="stay-with-us max-w-amulette lg:px-amulette mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between bg-[#FFEFE8] rounded-2xl px-5 lg:px--16 py-8 lg:py-14">
 				<div className="col-left flex flex-col items-center justify-center">
 					<h1 className="text-[#1B1B1B] text-xl lg:text-4xl font-Poppins font-bold lg:font-medium">
 						Stay with us
