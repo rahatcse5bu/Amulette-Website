@@ -32,7 +32,8 @@ const CategoryTabs = ({ photosLibrarySidebar }) => {
 			</div>
 			<div
 				onClick={() => dispatch(setCategory("community"))}
-				className={`tab-item w-full flex flex-row items-center justify-start space-x-2 ${
+				style={{ margin: 0 }}
+				className={`tab-item w-full flex flex-row mt-0 items-center justify-start space-x-2 ${
 					category === "community"
 						? "bg-primaryColor text-white"
 						: "bg-categoryTabColor text-[#444]"
