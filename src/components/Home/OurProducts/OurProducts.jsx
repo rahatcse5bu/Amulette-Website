@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useRef, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -9,7 +10,6 @@ import NextButtonCustomEB from "../../NextPrevButton/NextButtonCustomEB";
 import { productsData } from "./ProductData";
 import ProductDetailsPage from "../../../pages/ProductDetailsPage";
 import { BsXCircle } from "react-icons/bs";
-// import PrevButtonCustomCF from '../../NextPrevButton/PrevButtonCustomCF';
 const OurProducts = ({ isOurProduct = true }) => {
 	const [isPrevDisabled, setIsPrevDisabled] = useState(true);
 	const [isNextDisabled, setIsNextDisabled] = useState(false);
@@ -89,6 +89,9 @@ const OurProducts = ({ isOurProduct = true }) => {
 								index={index}
 							/>
 						))}
+						{productsData && productsData.length > 0 && (
+							<div className="w-[300px]"></div>
+						)}
 					</Carousel>
 					<div className="flex flex-row items-center justify-center mt-10">
 						<button className="px-8 py-4 cursor-pointer hover:bg-primaryColor hover:text-white text-primaryColor border-2 border-primaryColor rounded-[10px]">
