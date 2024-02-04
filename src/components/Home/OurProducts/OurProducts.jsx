@@ -7,6 +7,8 @@ import NextButton from '../../NextPrevButton/NextButton';
 import PrevButtonCustomCF from '../../NextPrevButton/PrevButtonCustomCF';
 import NextButtonCustomEB from '../../NextPrevButton/NextButtonCustomEB';
 import { productsData } from './ProductData';
+import ProductDetailsPage from '../../../pages/ProductDetailsPage';
+import { BsXCircle } from "react-icons/bs";
 // import PrevButtonCustomCF from '../../NextPrevButton/PrevButtonCustomCF';
 const OurProducts = ({isOurProduct=true}) => {
     const [isPrevDisabled, setIsPrevDisabled] = useState(true)
@@ -14,7 +16,7 @@ const OurProducts = ({isOurProduct=true}) => {
   
     const prevRef = useRef(null);
     const nextRef = useRef(null);
-
+    const [showModal, setShowModal] = useState(false);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -82,7 +84,7 @@ const OurProducts = ({isOurProduct=true}) => {
           // renderButtonGroupOutside
           >
             {productsData?.map((data, index) => (
-              <ProductCard key={index} product={data} index={index} />
+              <ProductCard setShowModal={setShowModal} key={index} product={data} index={index} />
             ))}
 
           </Carousel>
@@ -93,12 +95,27 @@ const OurProducts = ({isOurProduct=true}) => {
 <div className='mobile-product-wrapper block lg:hidden '>
 <div className='mobile-product-grid lg:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 '>
           {productsData && productsData.length > 0 && productsData.map((data,  index) => (
-            <ProductCard key={index} product={data} index={index} />
+            <ProductCard setShowModal={setShowModal} key={index} product={data} index={index} />
             ))}
         </div>
         <div className='flex flex-row items-center justify-center m-10'>
             <button className='px-4 lg:px-8 py-2 lg:py-4 cursor-pointer hover:bg-primaryColor hover:text-white text-primaryColor border-2 border-primaryColor rounded-[10px]'>View ALL Products</button>
           </div>
+          {showModal && (
+				<div className="fixed inset-0 bg-[rgba(0,0,0,0.3)] z-[99999] flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+					<div className="relative w-[90%] h-[90vh] overflow-y-auto  bg-white z-[9999] my-6 rounded-md mx-auto">
+						<div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
+							<div className="absolute top-2 right-2 ">
+								<BsXCircle
+									onClick={() => setShowModal(false)}
+									className="w-5 h-5 text-red-600 cursor-pointer"
+								/>
+							</div>
+						</div>
+						<ProductDetailsPage  />
+					</div>
+				</div>
+			)}
 </div>
 
             </div>
