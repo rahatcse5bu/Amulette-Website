@@ -9,7 +9,7 @@ const Hero = () => {
         <h3 className="text-left capitalize text-primaryColor font-Poppins font-bold text-sm lg:text-xl">
           Express Yourself with Amulette
         </h3>
-        <div className="heading-section flex flex-col items-start justify-start text-left font-Poppins text-[30px] lg:text-[66px] text-headingColor mt-8">
+        <div className="heading-section flex flex-col items-start justify-start text-left font-Poppins text-[30px] font-bold lg:text-[66px] text-headingColor mt-8">
           <span className="blockk">Your Personal</span>
           <span className="">Badge of Creativity!</span>
         </div>
