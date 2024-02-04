@@ -5,7 +5,7 @@ export default {
 		extend: {
 			container: {
 				center: true,
-				padding: "7%",
+				padding: "5%",
 				screens: {
 					xl: "1400px",
 				},
@@ -14,7 +14,7 @@ export default {
 				amulette: "1400px", // Custom max width
 			},
 			padding: {
-				amulette: "7%", // Custom padding
+				amulette: "5%", // Custom padding
 			},
 			colors: {
 				primaryColor: "#F65F19",

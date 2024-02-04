@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { setSingleProduct } from "../../../redux/features/products";
 import classNames from "classnames";
 
-const ProductCard = ({ product, setShowModal, ourProductSlide }) => {
+const ProductCard = ({ product, setShowModal, ourCardHomeCarousel }) => {
 	const dispatch = useDispatch();
 	const showModalHandler = () => {
 		dispatch(setSingleProduct(product));
@@ -15,16 +15,29 @@ const ProductCard = ({ product, setShowModal, ourProductSlide }) => {
 			className={classNames(
 				"flex flex-col items-center justify-center py-6 border border-black product-card border-opacity-20 rounded-3xl",
 				{
-					"w-[150px]": ourProductSlide === true,
+					// "w-[200px]": ourCardHomeCarousel === true,
 				}
 			)}
 		>
 			<div
 				onClick={showModalHandler}
-				className="img-wrapper px-4 py-1.5 lg:px--[30px] lg:py--[15px] border border-[#F6F6F6] bg-[#F6F6F6] rounded-2xl cursor-pointer"
+				className={classNames(
+					"img-wrapper px-4 py-1.5 lg:px--[30px] lg:py--[15px] border border-[#F6F6F6] bg-[#F6F6F6] rounded-2xl cursor-pointer"
+				)}
 			>
-				<div className="img-parent overflow-hidden h-[120px] w-[120px] lg:h-[221px] lg:w-[221px]">
-				<img src={`${product.img}`} alt=""  />
+				<div
+					className={classNames(
+						"img-parent overflow-hidden h-[120px] w-[120px] lg:h-[221px] lg:w-[221px]",
+						{}
+					)}
+				>
+					<img
+						src={`${product.img}`}
+						className={classNames({
+							// "w-[150px]": ourCardHomeCarousel === true,
+						})}
+						alt=""
+					/>
 				</div>
 			</div>
 			<h3
@@ -43,7 +56,8 @@ const ProductCard = ({ product, setShowModal, ourProductSlide }) => {
 				<button className="bg-primaryColor text-white px-5 lg:px-10 py-1.5 lg:py-3.5 rounded-[50px]">
 					<div className="flex flex-row items-center justify-center space-x-1.5">
 						{" "}
-						<IoCartOutline className="h-4 w-4" size={16} /> <span className="text-[7px] font-medium lg:text-sm">Buy Now</span>
+						<IoCartOutline className="h-4 w-4" size={16} />{" "}
+						<span className="text-[7px] font-medium lg:text-sm">Buy Now</span>
 					</div>
 				</button>
 			</div>

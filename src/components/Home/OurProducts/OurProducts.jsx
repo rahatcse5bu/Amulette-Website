@@ -24,7 +24,7 @@ const OurProducts = ({ isOurProduct = true }) => {
 			items: 5,
 		},
 		desktop: {
-			breakpoint: { max: 3000, min: 1024 },
+			breakpoint: { max: 3000, min: 1000 },
 			items: 4,
 		},
 		tablet: {
@@ -38,7 +38,7 @@ const OurProducts = ({ isOurProduct = true }) => {
 	};
 	return (
 		<div className="our-products-wrapper mt-[52px]">
-			<div className="our-products containerr max-w-amulette lg:px-amulette mx-auto px-5 ">
+			<div className="our-products  max-w-amulette lg:px-amulette mx-auto px-5 ">
 				{isOurProduct && (
 					<h1 className="text-xl lg:text-[40px] font-semibold font-Poppins text-center mb-5">
 						<span className="text-primaryColor">Our </span>
@@ -52,7 +52,7 @@ const OurProducts = ({ isOurProduct = true }) => {
 
 					<Carousel
 						className="mx-auto mt-6 md:mt-16  relative z--0"
-						//        partialVisible={false}
+						partialVisible={true}
 						swipeable={true}
 						draggable={true}
 						//   showDots={true}
@@ -71,7 +71,7 @@ const OurProducts = ({ isOurProduct = true }) => {
 						//   deviceType={this.props.deviceType}
 
 						dotListClass="custom-dot-list-style"
-						itemClass="carousel-item-padding-40-px mx-4"
+						itemClass="carousel-item-padding-40-px mx-2"
 						customLeftArrow={<PrevButton prevRef={prevRef} />}
 						customRightArrow={<NextButton nextRef={nextRef} />}
 						beforeChange={(nextSlide) => {
@@ -79,6 +79,8 @@ const OurProducts = ({ isOurProduct = true }) => {
 							setIsPrevDisabled(nextSlide === 0);
 							setIsNextDisabled(nextSlide === 2);
 						}}
+						centerMode={false}
+						containerClass="pb-10 w-full "
 						// renderButtonGroupOutside
 					>
 						{productsData?.map((data, index) => (
@@ -87,6 +89,7 @@ const OurProducts = ({ isOurProduct = true }) => {
 								key={index}
 								product={data}
 								index={index}
+								ourCardHomeCarousel
 							/>
 						))}
 						{productsData && productsData.length > 0 && (
