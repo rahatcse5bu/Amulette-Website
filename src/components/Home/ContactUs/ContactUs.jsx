@@ -1,10 +1,11 @@
-
 const ContactUs = () => {
 	return (
-		<div className="contact-us-wrapper pt-6 lg:pt-7"
-		style={{
-			backgroundImage:"linear-gradient(180deg, rgba(246, 95, 25, 0.10) 0%, rgba(246, 95, 25, 0.01) 100%)",
-	}}
+		<div
+			className="contact-us-wrapper pt-6 lg:pt-7"
+			style={{
+				backgroundImage:
+					"linear-gradient(180deg, rgba(246, 95, 25, 0.10) 0%, rgba(246, 95, 25, 0.01) 100%)",
+			}}
 		>
 			<div className="containerr max-w-amulette lg:px-amulette mx-auto contact-us flex flex-col items-center justify-center px-5 lg:px--0">
 				<h1 className="text-center font-Poppins text-xl lg:text-[40px] font-bold">
@@ -54,7 +55,7 @@ const ContactUs = () => {
 									className="w-full mt-2.5 px-5 py-5 border border-[#E0E0E0] rounded-[10px]"
 								></textarea>
 							</div>
-							<div className="pt-2 button-wrapper">
+							<div className="pt-2 button-wrapper lg:pb-0 pb-5">
 								<button
 									style={{
 										boxShadow:
