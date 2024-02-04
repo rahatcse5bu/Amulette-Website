@@ -1,14 +1,24 @@
+/* eslint-disable react/prop-types */
 import { useDispatch, useSelector } from "react-redux";
 import { setCategory } from "../../../redux/features/photoLibrary";
+import classNames from "classnames";
 
-const CategoryTabs = () => {
+const CategoryTabs = ({ photosLibrarySidebar }) => {
 	const dispatch = useDispatch();
 	//   const category = useSelector((state) => state.photo);
 	// const category = useSelector((state) => state.photo);
-    const { category } = useSelector((state) => state.photo);
+	const { category } = useSelector((state) => state.photo);
 	// console.log("category", category);
 	return (
-		<div className="flex flex-col items-center justify-center mt-5 space-y-4 category-tabs ">
+		<div
+			className={classNames(
+				" items-center justify-center mt-5 space-y-4 category-tabs ",
+				{
+					"grid grid-cols-2 gap-2": photosLibrarySidebar === true,
+					"flex flex-col": photosLibrarySidebar === false,
+				}
+			)}
+		>
 			<div
 				onClick={() => dispatch(setCategory("all"))}
 				className={`tab-item w-full flex flex-row items-center justify-start space-x-2 ${
