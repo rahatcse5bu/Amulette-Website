@@ -7,7 +7,10 @@ const DesktopHeader = () => {
 	return (
 		<div className="containerr max-w-amulette lg:px-amulette hidden lg:flex flex-row items-center justify-between py-6 mx-auto header">
 			<div className="logo">
-				<img src="Images/Header/Logo.svg" alt="amulette logo" />
+			<NavLink to={"/"}>
+            <img src="Images/Header/Logo.svg" />
+          </NavLink>
+				
 			</div>
 			<div className="header-menu-items">
 				<ul className="flex flex-row items-center justify-center space-x-10 text-lg font-semibold text-menuColor font-Poppins">
